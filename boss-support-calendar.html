@@ -33,6 +33,15 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
 .cwk-call.cwk-soon .cwk-t{color:#667085;}
 .cwk-call.cwk-soon .cwk-badge{background:#E4E7EC;color:#475467;text-transform:uppercase;letter-spacing:.03em;}
 .cwk-foot{margin:18px 0 0;padding-top:12px;border-top:2px solid #EAECF0;font-size:11px;font-weight:600;color:#344054;}
+.cwk-announcements{margin-top:22px;padding-top:16px;border-top:3px solid #101828;}
+.cwk-announcements-hd{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#101828;margin-bottom:12px;}
+.cwk-announce{position:relative;background:#FFF9E6;border:1px solid #F3D98B;border-radius:12px;padding:14px 16px 14px 42px;margin-bottom:10px;}
+.cwk-announce:last-child{margin-bottom:0;}
+.cwk-announce::before{content:"📌";position:absolute;left:14px;top:14px;font-size:16px;line-height:1;}
+.cwk-announce h3{margin:0 0 6px;font-size:13.5px;font-weight:800;color:#101828;}
+.cwk-announce p{margin:0 0 8px;font-size:12px;line-height:1.5;color:#344054;}
+.cwk-announce p:last-child{margin-bottom:0;}
+.cwk-announce .cwk-announce-date{display:inline-block;margin:2px 0 8px;padding:3px 9px;border-radius:999px;background:#FEF0C7;font-size:11px;font-weight:700;color:#B54708;}
 @media (max-width:620px){.cwk-week{grid-template-columns:repeat(2,minmax(0,1fr));} .cwk-top{align-items:flex-start;} .cwk-brand{align-items:flex-start;}}
 @media (max-width:400px){.cwk-week{grid-template-columns:1fr;}}
 </style>
@@ -80,6 +89,20 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
 
     <div class="cwk-day">
       <div class="cwk-dayhd">FRI</div>
+    </div>
+
+  </div>
+
+  <!-- ANNOUNCEMENTS: To add a new pinned announcement, copy one entire "cwk-announce" block below (from <div class="cwk-announce"> to its closing </div>), paste it, and edit the text. Put the newest/most important announcement first. -->
+  <div class="cwk-announcements">
+    <div class="cwk-announcements-hd"><span>&#128204;</span> Announcements</div>
+
+    <div class="cwk-announce">
+      <h3>Magazine &amp; Newsletter Skill Workshop with Doug &mdash; Pin This!</h3>
+      <span class="cwk-announce-date">Wed, Oct 7 &middot; 9:00&ndash;11:00 AM PT</span>
+      <p>This will take place during your normal Wednesday BOSS Training call. We&rsquo;re extending the call to 2 hours for this special workshop with Doug, who will walk you through the Magazine &amp; Newsletter Skill he created, how it works, and how you can begin putting it to use in your business.</p>
+      <span class="cwk-announce-date">Follow-up: Fri, Nov 6 &middot; 11:00 AM&ndash;12:00 PM PT</span>
+      <p>We&rsquo;ll come back together four weeks later for a follow-up session with Doug &mdash; time to implement the skill, then return with questions for additional support.</p>
     </div>
 
   </div>
