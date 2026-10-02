@@ -16,12 +16,12 @@ Static HTML support calendars for Krista Mashore Coaching students. One `.html` 
 
 ## Workflow (always follow, every time)
 
-Several people edit this repo from their own computers, so your local copy may be out of date.
+Several people edit this repo from their own computers, so your local copy may be out of date. Pushing to `main` makes a change live for students immediately, so **nothing goes live until the user says so.**
 
-1. **Before touching any file:** run `git pull --rebase`. If it fails or reports conflicts, stop and tell the user. Do not guess.
+1. **At the start of every task, before touching any file:** run `git pull --rebase` so you are working from the latest live version. Do this for each new request to change a calendar, not just once per session, because someone else may have pushed in between. If it fails or reports conflicts, stop and tell the user. Do not guess.
 2. Make the change. Preview the page in a browser if you can, and check the hard rules below.
 3. Commit with a clear message saying what changed and why.
-4. **Push only when the user asks** (e.g. "push it live"). Right before pushing, run `git pull --rebase` again, then `git push origin main`. If the push is rejected, pull and retry once. If it still fails, stop and ask.
+4. **Never push automatically.** After committing, tell the user the change is saved on their computer only and is **not live yet**, then wait. Push only after the user says "push it live" (or clearly says the same thing in other words). Replies like "looks good", "ok" or "thanks" are not permission to push. If the user spots a mistake before then, fix it with a new commit; nothing has gone live, so there is no harm done. When they do say to push: run `git pull --rebase` again, then `git push origin main`. If the push is rejected, pull and retry once. If it still fails, stop and ask.
 5. Never force-push, never rewrite history that has been pushed, never delete branches.
 
 ## Calendars
