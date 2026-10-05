@@ -66,6 +66,7 @@ For time zones, match the label the file already uses (`PT` in most files, `PST`
 Memory does not carry between people or computers, so track anything dated here. When you add a one-off item (holiday closure, special event, dated announcement), add a line below. When you remove it, delete the line. If a date below has passed, tell the user it is ready to remove.
 
 - Boss + AI Mastermind announcement "Magazine & Newsletter Skill Workshop with Doug" (workshop Oct 7, follow-up Nov 6, 2026): remove after Nov 6, 2026.
+- "KMC Book Club - The Thinking Effect" placeholder on **Wednesday, Oct 28, 10 am PST** on all 9 calendars (unlinked, "Link Coming Soon"). When the link arrives, make it a real link. Remove it after Oct 28 unless told otherwise. The regular Tuesday "KMC Book Club" (first Tuesday monthly) was removed from all calendars on Oct 5, 2026 because the boss is deciding the future and best time for Book Club. Do not restore a Tuesday Book Club unless the user says so.
 
 ## Creating a new calendar
 
