@@ -57,9 +57,9 @@ For time zones, match the label the file already uses (`PT` in most files, `PST`
 ## Standing rules between calendars
 
 - **Shared calls use the same link everywhere** (the Monday 8 am Coaching Call, Mashore Method Office Hours, and others). When a shared link or time changes, search every file for the old link (`grep`) and update every occurrence, unless told to change only one calendar.
-- **AI Mastermind mirrors Boss.** The AI Mastermind calendar shows every call on the Boss calendar plus its own Mastermind calls. When the Boss call list changes, make the same change on AI Mastermind. Names can differ slightly (Wednesday's "Boss Training with Krista" is "Krista's Boss Coaching Call" on Mastermind).
+- **AI Mastermind mirrors Boss.** The AI Mastermind calendar shows every call on the Boss calendar plus its own Mastermind calls. When the Boss call list changes, make the same change on AI Mastermind. The Wednesday call is named "Boss Training" on both. On Mastermind, the Monday 9-10 am Mastermind call is "Mastermind Coaching Call" (not a generic "Coaching Call"), so it is not confused with Krista.s Monday 8 am Coaching Call.
 - **The Wednesday "Mastery Coaching Call" belongs only on Elite and Mastery.** This is intentional.
-- **Announcements:** Boss and AI Mastermind each have an Announcements section below the grid. To add one, copy an entire `<div class="cwk-announce">...</div>` block and edit the text. Newest goes first. Ask which page(s) it should go on.
+- **Announcements:** Boss and AI Mastermind each have an Announcements section at the top of the page, above the Reminder. To add one, copy an entire `<div class="cwk-announce">...</div>` block and edit the text. Newest goes first. Ask which page(s) it should go on.
 
 ## Temporary / one-off items
 
