@@ -34,6 +34,10 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
 .cwk-purple{background:#7B5AA6;} .cwk-orange{background:#F7861F;} .cwk-blue{background:#29ABE2;}
 .cwk-indigo{background:#4B2270;} .cwk-red{background:#E4432D;} .cwk-lime{background:#A8C61A;}
 .cwk-foot{margin:18px 0 0;padding-top:12px;border-top:2px solid #EAECF0;font-size:11px;font-weight:600;color:#344054;}
+.cwk-summit{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:14px;padding:12px 16px;border-radius:12px;background:#EEF4FF;border:1px solid #B2CCFF;}
+.cwk-summit-tag{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:#fff;background:#2E3192;padding:4px 9px;border-radius:999px;}
+.cwk-summit-txt{font-size:12px;line-height:1.5;font-weight:600;color:#1D2939;}
+.cwk-summit-txt b{font-weight:800;color:#2E3192;}
 .cwk-announcements{margin-top:16px;}
 .cwk-announcements-hd{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#101828;margin-bottom:12px;}
 .cwk-announce{position:relative;background:#FFF9E6;border:1px solid #F3D98B;border-radius:12px;padding:14px 16px 14px 42px;margin-bottom:10px;}
@@ -77,6 +81,12 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
       <p class="cwk-sub">Every call is a shortcut. Click any call to join.</p>
     </div>
     <div class="cwk-brand"><b>AI</b><em>MASTERMIND</em></div>
+  </div>
+
+  <!-- Temporary Summit Week banner (Oct 14-16, 2026): delete this block after Oct 16 -->
+  <div class="cwk-summit">
+    <span class="cwk-summit-tag">Summit Week</span>
+    <div class="cwk-summit-txt"><b>Modified schedule: Wed, Oct 14 &ndash; Fri, Oct 16.</b> Some calls are changed or paused this week. Monday and Tuesday are unchanged.</div>
   </div>
 
   <!-- ANNOUNCEMENTS: To add a new pinned announcement, copy one entire "cwk-announce" block below (from <div class="cwk-announce"> to its closing </div>), paste it, and edit the text. Put the newest/most important announcement first. -->
@@ -132,13 +142,14 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
 
     <div class="cwk-day">
       <div class="cwk-dayhd">WED</div>
-      <a class="cwk-call cwk-pink" href="https://us06web.zoom.us/meeting/register/LxdyHKZWTqG7dDr0asiMug" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Boss Training</div><div class="cwk-t">9:00 am PST</div></a>
+      <div class="cwk-call cwk-soon"><div class="cwk-n">Team Summit</div><div class="cwk-badge">Wed, Oct 14</div></div>
       <div class="cwk-call cwk-soon"><div class="cwk-n">KMC Book Club &ndash; The Thinking Effect</div><div class="cwk-t">10:00 am PT</div><div class="cwk-badge">Oct 28 Only</div><div class="cwk-badge">Link Coming Soon</div></div>
       <a class="cwk-call cwk-navy" href="https://us06web.zoom.us/j/84350566869?pwd=ds1gRwX1yeHM2gFbTlWEf78DslWcVu.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Mashore Method Support Office Hours</div><div class="cwk-t">4:00 pm PT</div></a>
     </div>
 
     <div class="cwk-day">
       <div class="cwk-dayhd">THU</div>
+      <a class="cwk-call cwk-green" href="https://us06web.zoom.us/j/89770732689?pwd=pHog0P1g4egFYPx0MWlDWKO26wA0I4.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Office Hours</div><div class="cwk-t">8:30 &ndash; 9:30 am PST</div></a>
       <a class="cwk-call cwk-blue" href="https://us06web.zoom.us/j/88665203041?pwd=gFAvWnr1H6MKLFeVbm2s6BIPUE5EI2.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Mastermind Q&amp;A</div><div class="cwk-t">9:00 am PT</div><div class="cwk-badge">ID 886 6520 3041 &middot; PW 374637</div></a>
       <a class="cwk-call cwk-purple" href="https://us06web.zoom.us/j/89954637079?pwd=lOsdzQgbLctG3iZTsPW8yuP1lbflEK.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">BOSS Installation Office Hours</div><div class="cwk-t">12:00 pm PST</div><div class="cwk-badge">Only join if you need help installing BOSS</div></a>
       <a class="cwk-call cwk-green" href="https://us06web.zoom.us/j/87236310294?pwd=aYQFCGKga2BhcXbrgb7dJ7ApJm1hfR.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Boss Office Hours</div><div class="cwk-t">1:00 &ndash; 2:00 pm PST</div></a>
@@ -147,6 +158,7 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
     <div class="cwk-day">
       <div class="cwk-dayhd">FRI</div>
       <a class="cwk-call cwk-purple" href="https://us06web.zoom.us/j/81358161354?pwd=Z5bR9lsVFGMqy05RbfPrhoDWsZ8F3K.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">BOSS Installation Office Hours</div><div class="cwk-t">8:00 am PST</div><div class="cwk-badge">Only join if you need help installing BOSS</div></a>
+      <a class="cwk-call cwk-green" href="https://us06web.zoom.us/j/89770732689?pwd=pHog0P1g4egFYPx0MWlDWKO26wA0I4.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Office Hours</div><div class="cwk-t">8:30 &ndash; 9:30 am PST</div></a>
       <a class="cwk-call cwk-navy" href="https://us06web.zoom.us/j/83749173788?pwd=bDi8ScHSewUT9BYE0n5UWs7b2psBzf.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Mashore Method Support Office Hours</div><div class="cwk-t">10:00 am PT</div></a>
     </div>
 
