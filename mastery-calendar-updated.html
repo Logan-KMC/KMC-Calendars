@@ -88,10 +88,6 @@ html,body{margin:0;padding:0;background:#F6F4FA;}
 .kmcal-call.kmcal-soon .kmcal-badge { background: #E4E7EC; color: #475467; text-transform: uppercase; letter-spacing: .03em; }
 .kmcal-foot { margin: clamp(10px,1.2vw,18px) 0 0; padding-top: clamp(6px,.8vw,12px); border-top: 2px solid #EAECF0;
   font-size: clamp(9px,.82vw,11px); line-height: 1.5; font-weight: 600; color: #344054; }
-.kmcal-summit { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 14px; padding: 12px 16px; border-radius: 12px; background: #EEF4FF; border: 1px solid #B2CCFF; }
-.kmcal-summit-tag { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap; color: #fff; background: #2E3192; padding: 4px 9px; border-radius: 999px; }
-.kmcal-summit-txt { font-size: 12px; line-height: 1.5; font-weight: 600; color: #1D2939; }
-.kmcal-summit-txt b { font-weight: 800; color: #2E3192; }
 @media (max-width: 620px) {
   .kmcal-week { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
   .kmcal-top { align-items: flex-start; }
@@ -134,12 +130,6 @@ html,body{margin:0;padding:0;background:#F6F4FA;}
       <p class="kmcal-sub">Every call is a shortcut. Click any call to join.</p>
     </div>
     <div class="kmcal-brand"><b>Krista Mashore</b><em>COACHING</em></div>
-  </div>
-
-  <!-- Temporary Summit Week banner (Oct 14-16, 2026): delete this block after Oct 16 -->
-  <div class="kmcal-summit">
-    <span class="kmcal-summit-tag">Summit Week</span>
-    <div class="kmcal-summit-txt"><b>Modified schedule: Wed, Oct 14 &ndash; Fri, Oct 16.</b> Some calls are changed or paused this week. Monday and Tuesday are unchanged.</div>
   </div>
 
   <p class="kmcal-note"><b>Reminder:</b> Have your camera on or full name displayed to avoid removal. Names like &ldquo;iPhone,&rdquo; and AI notetakers are not allowed. Raise your hand for help and have the platform you need open and ready.</p>
@@ -206,22 +196,30 @@ html,body{margin:0;padding:0;background:#F6F4FA;}
 
     <div class="kmcal-day">
       <div class="kmcal-dayhd"><b>WED</b><i>3</i></div>
-      <div class="kmcal-call kmcal-soon"><div class="kmcal-n">Team Summit</div><div class="kmcal-badge">Wed, Oct 14</div></div>
+      <a class="kmcal-call kmcal-pink" href="https://us06web.zoom.us/meeting/register/WvZ49rfeSci-chKnRtwfnw" target="_blank" rel="noopener noreferrer">
+        <div class="kmcal-n">Mastery Coaching Call</div><div class="kmcal-t">8:00 &ndash; 9:15 am PT</div></a>
       <div class="kmcal-call kmcal-soon"><div class="kmcal-n">KMC Book Club &ndash; The Thinking Effect</div><div class="kmcal-t">10:00 am PT</div><div class="kmcal-badge">Oct 28 Only</div><div class="kmcal-badge">Link Coming Soon</div></div>
+      <a class="kmcal-call kmcal-orange" href="https://us06web.zoom.us/j/86034246898?pwd=TnHkmXK7avImUqxLUMlOuaJYIfoKiv.1" target="_blank" rel="noopener noreferrer">
+        <div class="kmcal-n">Office Hours</div><div class="kmcal-t">1:00 &ndash; 2:00 pm PT</div></a>
     </div>
 
     <div class="kmcal-day">
       <div class="kmcal-dayhd"><b>THU</b><i>4</i></div>
-      <a class="kmcal-call kmcal-orange" href="https://us06web.zoom.us/j/89770732689?pwd=pHog0P1g4egFYPx0MWlDWKO26wA0I4.1" target="_blank" rel="noopener noreferrer">
-        <div class="kmcal-n">Office Hours</div><div class="kmcal-t">8:30 &ndash; 9:30 am PT</div></a>
+      <a class="kmcal-call kmcal-orange" href="https://us06web.zoom.us/j/85781260004?pwd=ctyeaN7Na598vBeTKIHWwOcFqojOXx.1" target="_blank" rel="noopener noreferrer">
+        <div class="kmcal-n">Office Hours</div><div class="kmcal-t">6:00 &ndash; 7:00 am PT</div></a>
+      <div class="kmcal-call kmcal-blue">
+        <div class="kmcal-n">Group Accountability</div><div class="kmcal-t">8:00 &ndash; 9:00 am PT</div>
+        <div class="kmcal-t" style="margin-top:8px;">Reach out to your advisor through Voxer to get a link:<br>Dina: Dina KMC<br>Jennifer: jnew1972</div></div>
       <a class="kmcal-call kmcal-navy" href="https://us06web.zoom.us/j/82553606438?pwd=W7aCU5XQ5xgXYUtvlXmaOIm9e36ixo.1" target="_blank" rel="noopener noreferrer">
         <div class="kmcal-n">Mashore Method Office Hours</div><div class="kmcal-t">9:00 &ndash; 10:00 am PT</div></a>
+      <a class="kmcal-call kmcal-orange" href="https://us06web.zoom.us/j/85717972212?pwd=MrdEQwIfxsQ98YZfUSh0AuDFYpdAQ6.1" target="_blank" rel="noopener noreferrer">
+        <div class="kmcal-n">Office Hours</div><div class="kmcal-t">10:00 &ndash; 11:00 am PT</div></a>
     </div>
 
     <div class="kmcal-day">
       <div class="kmcal-dayhd"><b>FRI</b><i>2</i></div>
-      <a class="kmcal-call kmcal-orange" href="https://us06web.zoom.us/j/89770732689?pwd=pHog0P1g4egFYPx0MWlDWKO26wA0I4.1" target="_blank" rel="noopener noreferrer">
-        <div class="kmcal-n">Office Hours</div><div class="kmcal-t">8:30 &ndash; 9:30 am PT</div></a>
+      <a class="kmcal-call kmcal-orange" href="https://us06web.zoom.us/j/88321885201?pwd=ixDeR9u36l8E3T7GHUJTFgbbHlG77v.1" target="_blank" rel="noopener noreferrer">
+        <div class="kmcal-n">Office Hours</div><div class="kmcal-t">9:30 &ndash; 11:00 am PT</div></a>
       <a class="kmcal-call kmcal-navy" href="https://us06web.zoom.us/j/87217563574?pwd=rOgYqujhXxdmdCQxO1nSN7f5ag0UPH.1" target="_blank" rel="noopener noreferrer">
         <div class="kmcal-n">Mashore Method Office Hours</div><div class="kmcal-t">1:00 &ndash; 2:00 pm PT</div></a>
     </div>
