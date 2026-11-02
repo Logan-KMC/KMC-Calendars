@@ -37,6 +37,7 @@ Several people edit this repo from their own computers, so your local copy may b
 | `kmo-calendar.html` | KMO Calendar |
 | `30-day-success-plan.html` | 30 Day Success Plan |
 | `boss-support-calendar.html` | Boss Support Calendar |
+| `boss-training-and-support-calendar.html` | BOSS Training and Support (small two-day page for Krista/Evan: Tue + Thu only; Thu 10 am BOSS Training with Krista is unlinked until a link is sent) |
 
 Every file except Mastery uses the `cwk-` class prefix. Mastery uses `kmcal-` for the same structure (`kmcal-call`, `kmcal-n`, `kmcal-t`, ...). Keep this table current when a calendar is added or renamed.
 
