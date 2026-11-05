@@ -99,6 +99,17 @@ a.cwk-call:hover { transform: translateY(-3px); }
   .cwk-brand { align-items: flex-start; }
 }
 @media (max-width: 400px) { .cwk-week { grid-template-columns: 1fr; } }
+.cwk-r { position: absolute; opacity: 0; pointer-events: none; }
+.cwk-tablist { display: flex; flex-wrap: wrap; gap: 8px; margin-top: clamp(8px,1vw,14px); }
+.cwk-tablist label { cursor: pointer; display: flex; flex-direction: column; gap: 1px; padding: 8px 16px; border-radius: 12px;
+  border: 2px solid #D0D5DD; background: #fff; color: #344054; transition: all .15s ease; }
+.cwk-tablist label b { font-size: clamp(12px,1.2vw,15px); font-weight: 800; }
+.cwk-tablist label span { font-size: clamp(9.5px,.9vw,11.5px); font-weight: 600; }
+#cwk-wk1:checked ~ .cwk-tablist label[for="cwk-wk1"], #cwk-wk2:checked ~ .cwk-tablist label[for="cwk-wk2"] { background: #1D5FD6; border-color: #1D5FD6; color: #fff; }
+#cwk-wk1:focus-visible ~ .cwk-tablist label[for="cwk-wk1"], #cwk-wk2:focus-visible ~ .cwk-tablist label[for="cwk-wk2"] { outline: 3px solid #E0338A; outline-offset: 2px; }
+.cwk-pane { display: none; }
+#cwk-wk1:checked ~ .cwk-p1, #cwk-wk2:checked ~ .cwk-p2 { display: block; }
+.cwk-dayhd span { font-size: clamp(9.5px,.9vw,11.5px); font-weight: 700; color: #667085; }
 </style>
 </head>
 <body>
@@ -117,32 +128,54 @@ a.cwk-call:hover { transform: translateY(-3px); }
 
   <p class="cwk-note"><b>Reminder:</b> Have your camera on or full name displayed to avoid removal. Names like &ldquo;iPhone,&rdquo; and AI notetakers are not allowed. Raise your hand for help and have the platform you need open and ready.</p>
 
-  <div class="cwk-onetime">
-    <div class="cwk-onetime-hd"><span>One-Time Classes</span><b>Kickoff &amp; Bootcamp</b></div>
-    <div class="cwk-onetime-grid">
-      <div class="cwk-call cwk-soon cwk-pink">
-        <div class="cwk-n">Welcome &amp; Orientation</div><div class="cwk-h">with Eben</div>
-        <div class="cwk-t">Tue, Nov 10 &middot; 9:00 am PT</div><div class="cwk-t">12:00 pm ET</div>
-        <div class="cwk-badge">Link Coming Soon</div></div>
-      <div class="cwk-call cwk-soon cwk-pink">
-        <div class="cwk-n">Welcome &amp; Orientation</div><div class="cwk-h">with Eben</div>
-        <div class="cwk-t">Fri, Nov 13 &middot; Time to be confirmed</div>
-        <div class="cwk-badge">Link Coming Soon</div></div>
-      <div class="cwk-call cwk-soon cwk-blue">
-        <div class="cwk-n">Welcome &amp; BOSS Installation Workshop</div>
-        <div class="cwk-t">Tue, Nov 17 &middot; 2:00 pm PT</div><div class="cwk-t">5:00 pm ET</div>
-        <div class="cwk-badge">Link Coming Soon</div></div>
-      <div class="cwk-call cwk-soon cwk-black">
-        <div class="cwk-n">2-Day A.I. Builder Bootcamp</div><div class="cwk-h">with Eben</div>
-        <div class="cwk-t">Wed &amp; Thu, Nov 18&ndash;19 &middot; All day both days</div>
-        <div class="cwk-badge">Link Coming Soon</div></div>
+  <div class="cwk-tabs">
+    <input type="radio" name="cwk-wk" id="cwk-wk1" class="cwk-r" checked>
+    <input type="radio" name="cwk-wk" id="cwk-wk2" class="cwk-r">
+    <div class="cwk-tablist">
+      <label for="cwk-wk1"><b>Week 1</b><span>Nov 9 &ndash; 13 &middot; Kickoff</span></label>
+      <label for="cwk-wk2"><b>Week 2</b><span>Nov 16 &ndash; 20</span></label>
     </div>
-  </div>
-
+    <div class="cwk-pane cwk-p1">
   <div class="cwk-week">
 
     <div class="cwk-day">
-      <div class="cwk-dayhd"><b>MON</b></div>
+      <div class="cwk-dayhd"><b>MON</b><span>Nov 9</span></div>
+      <div class="cwk-none">No classes</div>
+    </div>
+
+    <div class="cwk-day">
+      <div class="cwk-dayhd"><b>TUE</b><span>Nov 10</span></div>
+      <a class="cwk-call cwk-pink" href="https://us02web.zoom.us/meeting/register/tZ0tdemqpjwjHtHX1GTmkGamzFwkpA_ny7E0" target="_blank" rel="noopener noreferrer">
+        <div class="cwk-n">Welcome &amp; Orientation</div><div class="cwk-h">with Eben</div>
+        <div class="cwk-t">9:00 &ndash; 11:00 am PT</div><div class="cwk-t">12:00 &ndash; 2:00 pm ET</div>
+        <div class="cwk-badge">Kickoff</div></a>
+    </div>
+
+    <div class="cwk-day">
+      <div class="cwk-dayhd"><b>WED</b><span>Nov 11</span></div>
+      <div class="cwk-none">No classes</div>
+    </div>
+
+    <div class="cwk-day">
+      <div class="cwk-dayhd"><b>THU</b><span>Nov 12</span></div>
+      <div class="cwk-none">No classes</div>
+    </div>
+
+    <div class="cwk-day">
+      <div class="cwk-dayhd"><b>FRI</b><span>Nov 13</span></div>
+      <a class="cwk-call cwk-pink" href="https://us02web.zoom.us/meeting/register/tZ0tdemqpjwjHtHX1GTmkGamzFwkpA_ny7E0" target="_blank" rel="noopener noreferrer">
+        <div class="cwk-n">Welcome &amp; Orientation</div><div class="cwk-h">with Eben</div>
+        <div class="cwk-t">9:00 &ndash; 11:00 am PT</div><div class="cwk-t">12:00 &ndash; 2:00 pm ET</div>
+        <div class="cwk-badge">Kickoff</div></a>
+    </div>
+
+  </div>
+    </div>
+    <div class="cwk-pane cwk-p2">
+  <div class="cwk-week">
+
+    <div class="cwk-day">
+      <div class="cwk-dayhd"><b>MON</b><span>Nov 16</span></div>
       <div class="cwk-call cwk-soon cwk-purple">
         <div class="cwk-n">Creative Video &amp; Content With A.I.</div><div class="cwk-h">Manny Garavito</div>
         <div class="cwk-t">8:00 am PT</div><div class="cwk-t">11:00 am ET</div>
@@ -166,11 +199,11 @@ a.cwk-call:hover { transform: translateY(-3px); }
     </div>
 
     <div class="cwk-day">
-      <div class="cwk-dayhd"><b>TUE</b></div>
-      <div class="cwk-call cwk-soon cwk-black">
+      <div class="cwk-dayhd"><b>TUE</b><span>Nov 17</span></div>
+      <a class="cwk-call cwk-black" href="https://us02web.zoom.us/meeting/register/tZ0tdemqpjwjHtHX1GTmkGamzFwkpA_ny7E0" target="_blank" rel="noopener noreferrer">
         <div class="cwk-n">Eben Teaches Marketing &amp; A.I.</div><div class="cwk-h">Eben</div>
-        <div class="cwk-t">8:00 &ndash; 10:00 am PT</div><div class="cwk-t">11:00 am &ndash; 1:00 pm ET</div>
-        <div class="cwk-badge">60 min class + 60 min Gym</div></div>
+        <div class="cwk-t">9:00 &ndash; 11:00 am PT</div><div class="cwk-t">12:00 &ndash; 2:00 pm ET</div>
+        <div class="cwk-badge">60 min class + 60 min Gym</div></a>
       <div class="cwk-call cwk-soon cwk-navy">
         <div class="cwk-n">BOSS Office Hours</div>
         <div class="cwk-t">1:00 &ndash; 2:00 pm PT</div><div class="cwk-t">4:00 &ndash; 5:00 pm ET</div>
@@ -179,10 +212,18 @@ a.cwk-call:hover { transform: translateY(-3px); }
         <div class="cwk-n">One to Many Marketing Training</div><div class="cwk-h">Logan &amp; Amanda</div>
         <div class="cwk-t">1:00 pm PT</div><div class="cwk-t">4:00 pm ET</div>
         <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-blue">
+        <div class="cwk-n">Welcome &amp; BOSS Installation Workshop</div>
+        <div class="cwk-t">2:00 pm PT</div><div class="cwk-t">5:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
     </div>
 
     <div class="cwk-day">
-      <div class="cwk-dayhd"><b>WED</b></div>
+      <div class="cwk-dayhd"><b>WED</b><span>Nov 18</span></div>
+      <div class="cwk-call cwk-soon cwk-black">
+        <div class="cwk-n">2-Day A.I. Builder Bootcamp</div><div class="cwk-h">with Eben</div>
+        <div class="cwk-t">All day &middot; Day 1 of 2</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
       <div class="cwk-call cwk-soon cwk-blue">
         <div class="cwk-n">Funnels, Ads, Sales, Marketing</div><div class="cwk-h">Warren McKee</div>
         <div class="cwk-t">8:00 &ndash; 10:00 am PT</div><div class="cwk-t">11:00 am &ndash; 1:00 pm ET</div>
@@ -202,7 +243,11 @@ a.cwk-call:hover { transform: translateY(-3px); }
     </div>
 
     <div class="cwk-day">
-      <div class="cwk-dayhd"><b>THU</b></div>
+      <div class="cwk-dayhd"><b>THU</b><span>Nov 19</span></div>
+      <div class="cwk-call cwk-soon cwk-black">
+        <div class="cwk-n">2-Day A.I. Builder Bootcamp</div><div class="cwk-h">with Eben</div>
+        <div class="cwk-t">All day &middot; Day 2 of 2</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
       <div class="cwk-call cwk-soon cwk-pink">
         <div class="cwk-n">BOSS Training with Krista</div>
         <div class="cwk-t">9:00 am PT</div><div class="cwk-t">12:00 pm ET</div>
@@ -214,10 +259,12 @@ a.cwk-call:hover { transform: translateY(-3px); }
     </div>
 
     <div class="cwk-day">
-      <div class="cwk-dayhd"><b>FRI</b></div>
+      <div class="cwk-dayhd"><b>FRI</b><span>Nov 20</span></div>
       <div class="cwk-none">No regular classes</div>
     </div>
 
+  </div>
+    </div>
   </div>
 
   <p class="cwk-foot">All times are Pacific (PT) with Eastern (ET) shown. All calls are subject to change or removal at any time based on student need and team capacity.</p>
@@ -225,5 +272,8 @@ a.cwk-call:hover { transform: translateY(-3px); }
 </div>
 </div>
 
+<script>
+try { if (new Date() >= new Date(2026, 10, 14)) document.getElementById('cwk-wk2').checked = true; } catch (e) {}
+</script>
 </body>
 </html>
