@@ -21,30 +21,36 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
 .cwk-brand em{font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.2em;color:#29ABE2;}
 .cwk-week{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:11px;margin-top:16px;align-items:start;}
 .cwk-day{display:flex;flex-direction:column;gap:7px;}
-.cwk-dayhd{text-align:center;padding-bottom:8px;border-bottom:2px solid #EAECF0;font-size:15px;font-weight:800;letter-spacing:.06em;color:#101828;}
-.cwk-call{display:block;padding:10px 12px;border-radius:10px;text-decoration:none;color:#fff;box-shadow:0 1px 3px rgba(16,24,40,.09);}
-.cwk-call .cwk-n{font-size:12.5px;line-height:1.25;font-weight:700;}
-.cwk-call .cwk-t{font-size:11px;line-height:1.35;font-weight:500;margin-top:2px;color:rgba(255,255,255,.88);}
-.cwk-call .cwk-badge{display:inline-block;margin-top:5px;padding:2px 7px;border-radius:999px;background:rgba(255,255,255,.22);font-size:9.5px;font-weight:600;}
-.cwk-pink{background:#EC1C82;} .cwk-navy{background:#2E3192;} .cwk-green{background:#7CB929;}
-.cwk-purple{background:#7B5AA6;} .cwk-orange{background:#F7861F;} .cwk-blue{background:#29ABE2;}
-.cwk-call.cwk-soon{background:#F2F2F4;border:1px dashed #C9CDD4;color:#475467;box-shadow:none;}
-.cwk-call.cwk-soon .cwk-n{color:#344054;}
-.cwk-call.cwk-soon .cwk-t{color:#667085;}
-.cwk-call.cwk-soon .cwk-badge{background:#E4E7EC;color:#475467;text-transform:uppercase;letter-spacing:.03em;}
-.cwk-dark{background:#344054;} .cwk-cyan{background:#8FDDF2;}
-.cwk-call.cwk-soon{border-left-width:4px;border-left-style:solid;}
-.cwk-call.cwk-soon.cwk-pink{border-left-color:#EC1C82;} .cwk-call.cwk-soon.cwk-navy{border-left-color:#2E3192;} .cwk-call.cwk-soon.cwk-green{border-left-color:#7CB929;}
-.cwk-call.cwk-soon.cwk-purple{border-left-color:#7B5AA6;} .cwk-call.cwk-soon.cwk-orange{border-left-color:#F7861F;} .cwk-call.cwk-soon.cwk-blue{border-left-color:#29ABE2;}
-.cwk-call.cwk-soon.cwk-dark{border-left-color:#344054;} .cwk-call.cwk-soon.cwk-cyan{border-left-color:#8FDDF2;}
-.cwk-onetime{margin-top:0;padding:14px 16px;border-radius:12px;background:rgba(236,28,130,.07);border:1px solid rgba(236,28,130,.22);}
-.cwk-onetime-hd{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#EC1C82;margin-bottom:10px;}
-.cwk-onetime-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}
-.cwk-onetime-item{background:#fff;border:1px solid #EAECF0;border-radius:10px;padding:10px 12px;}
-.cwk-onetime-item b{display:block;font-size:13px;font-weight:800;color:#101828;}
-.cwk-onetime-item span{display:block;margin-top:2px;font-size:11.5px;line-height:1.4;font-weight:500;color:#344054;}
-@media (max-width:900px){.cwk-card{padding:14px 10px 18px;} .cwk-week{gap:6px;} .cwk-dayhd{font-size:12px;letter-spacing:.03em;} .cwk-call{padding:8px 7px;} .cwk-call .cwk-n{font-size:11px;} .cwk-call .cwk-t{font-size:9.5px;} .cwk-call .cwk-badge{font-size:8px;padding:1px 5px;margin-top:4px;}}
-@media (max-width:760px){.cwk-onetime-grid{grid-template-columns:1fr;}}
+.cwk-dayhd{text-align:center;padding:11px 6px;border-radius:10px;font-size:15px;font-weight:800;letter-spacing:.08em;color:#fff;background:linear-gradient(180deg,#27508F 0%,#0F2B5C 55%,#0A1D45 100%);box-shadow:0 3px 0 #061330,0 8px 14px -6px rgba(10,29,69,.55),inset 0 1px 0 rgba(255,255,255,.28);text-shadow:0 1px 2px rgba(0,0,0,.35);}
+.cwk-call{position:relative;display:flex;align-items:center;gap:10px;padding:12px 12px 14px;border-radius:14px;text-decoration:none;color:#fff;overflow:hidden;--c1:#2F8FF0;--c2:#0D55BD;--edge:#093C8A;background:linear-gradient(180deg,var(--c1) 0%,var(--c2) 100%);box-shadow:0 4px 0 var(--edge),0 12px 18px -8px rgba(15,30,70,.55),inset 0 1px 0 rgba(255,255,255,.5),inset 0 -6px 10px rgba(0,0,0,.14);}
+.cwk-call::before{content:"";position:absolute;left:0;right:0;top:0;height:46%;background:linear-gradient(180deg,rgba(255,255,255,.32),rgba(255,255,255,0));border-radius:14px 14px 40% 40% / 14px 14px 18px 18px;pointer-events:none;}
+.cwk-call>*{position:relative;z-index:1;}
+.cwk-blue{--c1:#2F8FF0;--c2:#0D55BD;--edge:#093C8A;} .cwk-orange{--c1:#FFA03F;--c2:#EE6F0A;--edge:#B24E00;} .cwk-dark{--c1:#55565C;--c2:#1C1C20;--edge:#0B0B0D;}
+.cwk-navy{--c1:#2A4FA3;--c2:#12285E;--edge:#0A1740;} .cwk-pink{--c1:#FF3FA0;--c2:#D10F78;--edge:#9B0958;} .cwk-green{--c1:#9BD43E;--c2:#5E9A12;--edge:#437008;}
+.cwk-cyan{--c1:#B6F0FC;--c2:#5ECDEB;--edge:#35A3C4;color:#0B2A4A;}
+.cwk-cyan .cwk-n,.cwk-cyan .cwk-t{color:#0B2A4A;text-shadow:none;}
+.cwk-ic{flex:0 0 30px;width:30px;height:30px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 1px rgba(0,0,0,.3));}
+.cwk-cyan .cwk-ic{stroke:#0B2A4A;filter:none;}
+.cwk-body{flex:1;min-width:0;text-align:center;}
+.cwk-call .cwk-n{font-size:13.5px;line-height:1.2;font-weight:800;text-shadow:0 1px 2px rgba(0,0,0,.3);}
+.cwk-call .cwk-t{font-size:11.5px;line-height:1.35;font-weight:500;margin-top:3px;color:rgba(255,255,255,.92);}
+.cwk-call .cwk-badge{display:inline-block;margin-top:6px;padding:2px 9px;border-radius:999px;background:rgba(255,255,255,.95);color:#12285E;font-size:9.5px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;box-shadow:0 1px 2px rgba(0,0,0,.2);}
+.cwk-call .cwk-badge.cwk-badge-soft{background:rgba(255,255,255,.22);color:#fff;box-shadow:none;}
+.cwk-cyan .cwk-badge.cwk-badge-soft{background:rgba(11,42,74,.14);color:#0B2A4A;}
+.cwk-call.cwk-off{flex-direction:column;justify-content:center;min-height:330px;background:linear-gradient(180deg,#EEEFF7,#E1E3EF);color:#101828;box-shadow:inset 0 2px 8px rgba(30,40,90,.10);}
+.cwk-call.cwk-off::before{display:none;}
+.cwk-call.cwk-off .cwk-n{font-size:22px;line-height:1.15;color:#101828;text-shadow:none;text-align:center;}
+.cwk-ic-lg{width:54px;height:54px;stroke:#101828;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:10px;}
+.cwk-onetime{display:flex;align-items:center;margin-top:0;padding:14px 18px;border-radius:18px;background:linear-gradient(90deg,#FDE7F3 0%,#EEE9FB 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 6px 14px -8px rgba(120,60,160,.35);}
+.cwk-onetime-lead{display:flex;align-items:center;gap:12px;flex:0 0 auto;}
+.cwk-ic-pink{width:46px;height:46px;stroke:#EC1C82;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.cwk-onetime-lead span{font-size:21px;line-height:1.05;font-weight:800;text-transform:uppercase;color:#101828;}
+.cwk-onetime-item{display:flex;align-items:flex-start;gap:10px;flex:1 1 0;min-width:0;margin-left:18px;padding:2px 0 2px 18px;border-left:2px solid rgba(16,24,40,.25);}
+.cwk-ic-mini{flex:0 0 24px;width:24px;height:24px;stroke:#2E3192;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.cwk-onetime-item b{display:block;font-size:17px;font-weight:800;line-height:1.15;color:#101828;}
+.cwk-onetime-item span{display:block;margin-top:2px;font-size:12.5px;line-height:1.3;font-weight:500;color:#101828;}
+@media (max-width:900px){.cwk-card{padding:14px 10px 18px;} .cwk-week{gap:6px;} .cwk-dayhd{font-size:12px;letter-spacing:.03em;padding:8px 2px;} .cwk-call{padding:9px 7px 12px;border-radius:12px;} .cwk-call .cwk-ic{display:none;} .cwk-call .cwk-n{font-size:11px;} .cwk-call .cwk-t{font-size:9.5px;} .cwk-call .cwk-badge{font-size:8px;padding:1px 6px;margin-top:4px;} .cwk-call.cwk-off{min-height:150px;} .cwk-call.cwk-off .cwk-n{font-size:15px;} .cwk-ic-lg{width:36px;height:36px;} .cwk-onetime{flex-wrap:wrap;gap:10px;padding:12px;} .cwk-onetime-lead{flex:1 0 100%;} .cwk-onetime-lead span{font-size:16px;} .cwk-ic-pink{width:34px;height:34px;} .cwk-onetime-item{margin-left:0;padding-left:10px;flex:1 1 28%;} .cwk-onetime-item b{font-size:13px;} .cwk-onetime-item span{font-size:11px;}}
+@media (max-width:520px){.cwk-onetime-item{flex:1 0 100%;}}
 .cwk-foot{margin:18px 0 0;padding-top:12px;border-top:2px solid #EAECF0;font-size:11px;font-weight:600;color:#344054;}
 .cwk-announcements{margin-top:16px;}
 .cwk-announcements-hd{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#101828;margin-bottom:12px;}
@@ -61,53 +67,61 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-video" viewBox="0 0 24 24"><rect x="2" y="6" width="13" height="12" rx="2"/><path d="M15 10l6-3v10l-6-3z"/></symbol>
+<symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><rect x="4" y="13" width="3" height="7" rx=".5"/><rect x="10.5" y="8" width="3" height="12" rx=".5"/><rect x="17" y="3" width="3" height="17" rx=".5"/></symbol>
+<symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="2.5" y="13" width="4" height="6" rx="1.5"/><rect x="17.5" y="13" width="4" height="6" rx="1.5"/><path d="M19.5 19c0 2-2 3-5 3h-2"/></symbol>
+<symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="6.5"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1"/></symbol>
+<symbol id="i-people" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><circle cx="5" cy="10" r="2.2"/><circle cx="19" cy="10" r="2.2"/><path d="M6.5 19v-1.5a5.5 5.5 0 0 1 11 0V19z"/><path d="M1.5 17.5v-1a3.5 3.5 0 0 1 4-3.4M22.5 17.5v-1a3.5 3.5 0 0 0-4-3.4"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 17h.01M12 17h.01"/></symbol>
+</svg>
 
 <div class="cwk-wrap">
 <div class="cwk-card">
 
   <div class="cwk-onetime">
-    <div class="cwk-onetime-hd">One-Time Classes</div>
-    <div class="cwk-onetime-grid">
-      <div class="cwk-onetime-item"><b>Tue, Nov 10</b><span>Welcome &amp; Orientation with Eben</span><span>9:00 am PT (12:00 pm ET)</span></div>
-      <div class="cwk-onetime-item"><b>Fri, Nov 13</b><span>Welcome &amp; Orientation with Eben</span><span>Time to be Confirmed</span></div>
-      <div class="cwk-onetime-item"><b>Wed&ndash;Thu, Nov 18&ndash;19</b><span>2-Day A.I. Builder Bootcamp with Eben</span><span>All Day Both Days</span></div>
-    </div>
+    <div class="cwk-onetime-lead"><svg class="cwk-ic-pink" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cal"/></svg><span>One-Time<br>Classes</span></div>
+    <div class="cwk-onetime-item"><svg class="cwk-ic-mini" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cal"/></svg><div><b>Tue, Nov 10</b><span>Welcome &amp; Orientation with Eben</span><span>9:00 am PT (12:00 pm ET)</span></div></div>
+    <div class="cwk-onetime-item"><svg class="cwk-ic-mini" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cal"/></svg><div><b>Fri, Nov 13</b><span>Welcome &amp; Orientation with Eben</span><span>Time to be Confirmed</span></div></div>
+    <div class="cwk-onetime-item"><svg class="cwk-ic-mini" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cal"/></svg><div><b>Wed&ndash;Thu, Nov 18&ndash;19</b><span>2-Day A.I. Builder Bootcamp with Eben</span><span>All Day Both Days</span></div></div>
   </div>
 
   <div class="cwk-week">
 
     <div class="cwk-day">
       <div class="cwk-dayhd">MON</div>
-      <div class="cwk-call cwk-soon cwk-orange"><div class="cwk-n">Creative Video &amp; Content With A.I.</div><div class="cwk-t">with Manny Garavito</div><div class="cwk-t">8:00 am PT<br>(11:00 am ET)</div><div class="cwk-badge">Link Coming Soon</div></div>
-      <div class="cwk-call cwk-soon cwk-dark"><div class="cwk-n">Professional Branding With A.I.</div><div class="cwk-t">with Tom Gilmartin</div><div class="cwk-t">8:00 am PT<br>(11:00 am ET)</div><div class="cwk-badge">Link Coming Soon</div></div>
-      <div class="cwk-call cwk-soon cwk-blue"><div class="cwk-n">Funnels, Ads, Sales, Marketing</div><div class="cwk-t">with Warren McKee</div><div class="cwk-t">9:00 &ndash; 11:00 am PT<br>(12:00 &ndash; 2:00 pm ET)</div><div class="cwk-badge">Link Coming Soon</div></div>
-      <div class="cwk-call cwk-soon cwk-blue"><div class="cwk-n">Beginner Office Hours</div><div class="cwk-t">with Warren McKee</div><div class="cwk-t">12:00 &ndash; 2:00 pm PT<br>(3:00 &ndash; 5:00 pm ET)</div><div class="cwk-badge">Link Coming Soon</div></div>
-      <div class="cwk-call cwk-soon cwk-blue"><div class="cwk-n">Advanced Office Hours</div><div class="cwk-t">with Warren McKee</div><div class="cwk-t">3:00 &ndash; 5:00 pm PT<br>(6:00 &ndash; 8:00 pm ET)</div><div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-orange"><svg class="cwk-ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-video"/></svg><div class="cwk-body"><div class="cwk-n">Creative Video &amp; Content With A.I.</div><div class="cwk-t">with Manny Garavito</div><div class="cwk-t">8:00 am PT<br>(11:00 am ET)</div><div class="cwk-badge cwk-badge-soft">Link Coming Soon</div></div></div>
+      <div class="cwk-call cwk-soon cwk-dark"><svg class="cwk-ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-laptop"/></svg><div class="cwk-body"><div class="cwk-n">Professional Branding With A.I.</div><div class="cwk-t">with Tom Gilmartin</div><div class="cwk-t">8:00 am PT<br>(11:00 am ET)</div><div class="cwk-badge cwk-badge-soft">Link Coming Soon</div></div></div>
+      <div class="cwk-call cwk-soon cwk-blue"><svg class="cwk-ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chart"/></svg><div class="cwk-body"><div class="cwk-n">Funnels, Ads, Sales, Marketing</div><div class="cwk-t">with Warren McKee</div><div class="cwk-t">9:00 &ndash; 11:00 am PT<br>(12:00 &ndash; 2:00 pm ET)</div><div class="cwk-badge cwk-badge-soft">Link Coming Soon</div></div></div>
+      <div class="cwk-call cwk-soon cwk-blue"><svg class="cwk-ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-headset"/></svg><div class="cwk-body"><div class="cwk-n">Beginner Office Hours</div><div class="cwk-t">with Warren McKee</div><div class="cwk-t">12:00 &ndash; 2:00 pm PT<br>(3:00 &ndash; 5:00 pm ET)</div><div class="cwk-badge cwk-badge-soft">Link Coming Soon</div></div></div>
+      <div class="cwk-call cwk-soon cwk-blue"><svg class="cwk-ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-headset"/></svg><div class="cwk-body"><div class="cwk-n">Advanced Office Hours</div><div class="cwk-t">with Warren McKee</div><div class="cwk-t">3:00 &ndash; 5:00 pm PT<br>(6:00 &ndash; 8:00 pm ET)</div><div class="cwk-badge cwk-badge-soft">Link Coming Soon</div></div></div>
     </div>
 
     <div class="cwk-day">
       <div class="cwk-dayhd">TUE</div>
-      <div class="cwk-call cwk-soon cwk-navy"><div class="cwk-n">Eben Teaches Marketing &amp; A.I.</div><div class="cwk-t">with Eben</div><div class="cwk-t">8:00 &ndash; 10:00 am PT<br>(11:00 am &ndash; 1:00 pm ET)</div><div class="cwk-badge">60 min class + 60 min Gym</div><div class="cwk-badge">Link Coming Soon</div></div>
-      <div class="cwk-call cwk-soon cwk-pink"><div class="cwk-n">BOSS Installation Workshop</div><div class="cwk-t">1:00 &ndash; 3:00 pm PT<br>(4:00 &ndash; 6:00 pm ET)</div><div class="cwk-badge">Tue, Nov 17 ONLY</div><div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-navy"><svg class="cwk-ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cap"/></svg><div class="cwk-body"><div class="cwk-n">Eben Teaches Marketing &amp; A.I.</div><div class="cwk-t">with Eben</div><div class="cwk-t">8:00 &ndash; 10:00 am PT<br>(11:00 am &ndash; 1:00 pm ET)</div><div class="cwk-badge">60 min class + 60 min Gym</div><div class="cwk-badge cwk-badge-soft">Link Coming Soon</div></div></div>
+      <div class="cwk-call cwk-soon cwk-pink"><svg class="cwk-ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-gear"/></svg><div class="cwk-body"><div class="cwk-n">BOSS Installation Workshop</div><div class="cwk-t">1:00 &ndash; 3:00 pm PT<br>(4:00 &ndash; 6:00 pm ET)</div><div class="cwk-badge">Tue, Nov 17 ONLY</div><div class="cwk-badge cwk-badge-soft">Link Coming Soon</div></div></div>
     </div>
 
     <div class="cwk-day">
       <div class="cwk-dayhd">WED</div>
-      <div class="cwk-call cwk-soon cwk-blue"><div class="cwk-n">Funnels, Ads, Sales, Marketing</div><div class="cwk-t">with Warren McKee</div><div class="cwk-t">8:00 &ndash; 10:00 am PT<br>(11:00 am &ndash; 1:00 pm ET)</div><div class="cwk-badge">Link Coming Soon</div></div>
-      <div class="cwk-call cwk-soon cwk-blue"><div class="cwk-n">Advanced Office Hours</div><div class="cwk-t">with Warren McKee</div><div class="cwk-t">11:00 am &ndash; 1:00 pm PT<br>(2:00 &ndash; 4:00 pm ET)</div><div class="cwk-badge">Link Coming Soon</div></div>
-      <div class="cwk-call cwk-soon cwk-cyan"><div class="cwk-n">One-to-Many Marketing Training</div><div class="cwk-t">with Logan &amp; Amanda</div><div class="cwk-t">12:00 pm PT<br>(3:00 pm ET)</div><div class="cwk-badge">Link Coming Soon</div></div>
-      <div class="cwk-call cwk-soon cwk-blue"><div class="cwk-n">Beginner Office Hours</div><div class="cwk-t">with Warren McKee</div><div class="cwk-t">2:00 &ndash; 4:00 pm PT<br>(5:00 &ndash; 7:00 pm ET)</div><div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-blue"><svg class="cwk-ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chart"/></svg><div class="cwk-body"><div class="cwk-n">Funnels, Ads, Sales, Marketing</div><div class="cwk-t">with Warren McKee</div><div class="cwk-t">8:00 &ndash; 10:00 am PT<br>(11:00 am &ndash; 1:00 pm ET)</div><div class="cwk-badge cwk-badge-soft">Link Coming Soon</div></div></div>
+      <div class="cwk-call cwk-soon cwk-blue"><svg class="cwk-ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-headset"/></svg><div class="cwk-body"><div class="cwk-n">Advanced Office Hours</div><div class="cwk-t">with Warren McKee</div><div class="cwk-t">11:00 am &ndash; 1:00 pm PT<br>(2:00 &ndash; 4:00 pm ET)</div><div class="cwk-badge cwk-badge-soft">Link Coming Soon</div></div></div>
+      <div class="cwk-call cwk-soon cwk-cyan"><svg class="cwk-ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-people"/></svg><div class="cwk-body"><div class="cwk-n">One-to-Many Marketing Training</div><div class="cwk-t">with Logan &amp; Amanda</div><div class="cwk-t">12:00 pm PT<br>(3:00 pm ET)</div><div class="cwk-badge cwk-badge-soft">Link Coming Soon</div></div></div>
+      <div class="cwk-call cwk-soon cwk-blue"><svg class="cwk-ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-headset"/></svg><div class="cwk-body"><div class="cwk-n">Beginner Office Hours</div><div class="cwk-t">with Warren McKee</div><div class="cwk-t">2:00 &ndash; 4:00 pm PT<br>(5:00 &ndash; 7:00 pm ET)</div><div class="cwk-badge cwk-badge-soft">Link Coming Soon</div></div></div>
     </div>
 
     <div class="cwk-day">
       <div class="cwk-dayhd">THU</div>
-      <div class="cwk-call cwk-soon cwk-pink"><div class="cwk-n">BOSS Training with Krista</div><div class="cwk-t">9:00 am PT<br>(12:00 pm ET)</div><div class="cwk-badge">Link Coming Soon</div></div>
-      <a class="cwk-call cwk-green" href="https://us06web.zoom.us/j/87236310294?pwd=aYQFCGKga2BhcXbrgb7dJ7ApJm1hfR.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Boss Office Hours</div><div class="cwk-t">1:00 &ndash; 2:00 pm PT<br>(4:00 &ndash; 5:00 pm ET)</div></a>
+      <div class="cwk-call cwk-soon cwk-pink"><svg class="cwk-ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-laptop"/></svg><div class="cwk-body"><div class="cwk-n">BOSS Training with Krista</div><div class="cwk-t">9:00 am PT<br>(12:00 pm ET)</div><div class="cwk-badge cwk-badge-soft">Link Coming Soon</div></div></div>
+      <a class="cwk-call cwk-green" href="https://us06web.zoom.us/j/87236310294?pwd=aYQFCGKga2BhcXbrgb7dJ7ApJm1hfR.1" target="_blank" rel="noopener noreferrer"><svg class="cwk-ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-headset"/></svg><div class="cwk-body"><div class="cwk-n">Boss Office Hours</div><div class="cwk-t">1:00 &ndash; 2:00 pm PT<br>(4:00 &ndash; 5:00 pm ET)</div></div></a>
     </div>
 
     <div class="cwk-day">
       <div class="cwk-dayhd">FRI</div>
-      <div class="cwk-call cwk-soon"><div class="cwk-n">No Regular Classes</div></div>
+      <div class="cwk-call cwk-off"><svg class="cwk-ic-lg" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cal"/></svg><div class="cwk-n">No Regular Classes</div></div>
     </div>
 
   </div>
