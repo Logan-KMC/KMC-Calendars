@@ -37,7 +37,7 @@ Several people edit this repo from their own computers, so your local copy may b
 | `kmo-calendar.html` | KMO Calendar |
 | `30-day-success-plan.html` | 30 Day Success Plan |
 | `boss-support-calendar.html` | Boss Support Calendar |
-| `marketing-boss-training-calendar.html` | Marketing Boss One-to-Many Marketing Training Calendar (new Nov 5, 2026; not part of the 9-calendar sync/spreadsheet unless asked) |
+| `marketing-boss-training-calendar.html` | Marketing Boss One-to-Many Marketing Training Calendar (new Nov 5, 2026; the tenth calendar, added to the Google Sheet list of calls on Nov 5; it is NOT part of the shared-call sync with the other 9 unless asked) |
 | `boss-training-and-support-calendar.html` | BOSS Training and Support (small two-day page for Krista/Evan: Tue + Thu only; Thu 9 am BOSS Training with Krista is a pink graphic-only card with no link, by request) |
 | `boss-marketing-calendar.html` | BOSS Marketing Calendar (added Nov 4, 2026; blue/pink/black palette from the Marketing BOSS graphic; shows PT with ET; every call is an unlinked "Link Coming Soon" card until links are given; no Skin in the Game banner; Friday has no regular classes; one-time Nov 10 / Nov 13 / Nov 18-19 classes sit in a strip above the week) |
 
