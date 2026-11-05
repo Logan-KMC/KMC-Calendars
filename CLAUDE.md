@@ -38,6 +38,7 @@ Several people edit this repo from their own computers, so your local copy may b
 | `30-day-success-plan.html` | 30 Day Success Plan |
 | `boss-support-calendar.html` | Boss Support Calendar |
 | `boss-training-and-support-calendar.html` | BOSS Training and Support (small two-day page for Krista/Evan: Tue + Thu only; Thu 9 am BOSS Training with Krista is a pink graphic-only card with no link, by request) |
+| `boss-marketing-calendar.html` | BOSS Marketing Calendar (added Nov 4, 2026; blue/pink/black palette from the Marketing BOSS graphic; shows PT with ET; every call is an unlinked "Link Coming Soon" card until links are given; no Skin in the Game banner; Friday has no regular classes; one-time Nov 10 / Nov 13 / Nov 18-19 classes sit in a strip above the week) |
 
 Every file except Mastery uses the `cwk-` class prefix. Mastery uses `kmcal-` for the same structure (`kmcal-call`, `kmcal-n`, `kmcal-t`, ...). Keep this table current when a calendar is added or renamed.
 

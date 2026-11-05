@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BOSS Marketing Calendar</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#F3F7FD;}
+.cwk-stage, .cwk-stage * { box-sizing: border-box; }
+.cwk-stage { position: relative; overflow: hidden; width: 100%;
+  padding: clamp(10px,1.4vw,22px); background: #F3F7FD; isolation: isolate; }
+.cwk-stage::before, .cwk-stage::after { content: ""; position: absolute; inset: -30%; z-index: 0; pointer-events: none; }
+.cwk-stage::before {
+  background:
+    radial-gradient(38% 46% at 16% 26%, rgba(29,95,214,.28), transparent 64%),
+    radial-gradient(34% 44% at 80% 20%, rgba(59,160,245,.28), transparent 64%),
+    radial-gradient(40% 48% at 64% 84%, rgba(142,124,240,.24), transparent 66%);
+  animation: cwkDriftA 26s ease-in-out infinite alternate; }
+.cwk-stage::after {
+  background:
+    radial-gradient(32% 40% at 84% 70%, rgba(224,51,138,.20), transparent 64%),
+    radial-gradient(36% 42% at 26% 80%, rgba(59,160,245,.22), transparent 64%),
+    radial-gradient(30% 38% at 50% 8%, rgba(15,47,122,.20), transparent 64%);
+  animation: cwkDriftB 34s ease-in-out infinite alternate; }
+@keyframes cwkDriftA {
+  0%   { transform: translate3d(-4%, -3%, 0) scale(1.05) rotate(0deg); }
+  50%  { transform: translate3d(5%, 4%, 0) scale(1.14) rotate(6deg); }
+  100% { transform: translate3d(-2%, 6%, 0) scale(1.06) rotate(-5deg); } }
+@keyframes cwkDriftB {
+  0%   { transform: translate3d(4%, 5%, 0) scale(1.10) rotate(3deg); }
+  50%  { transform: translate3d(-6%, -4%, 0) scale(1.18) rotate(-7deg); }
+  100% { transform: translate3d(3%, -6%, 0) scale(1.08) rotate(5deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .cwk-stage::before, .cwk-stage::after { animation: none; } }
+.cwk-note { display: block; width: 100%; margin: clamp(8px,1vw,14px) 0 0;
+  padding: clamp(7px,.8vw,11px) clamp(9px,1vw,14px); border-radius: 11px;
+  background: rgba(29,95,214,.08); border: 1px solid rgba(29,95,214,.24);
+  font-size: clamp(9.5px,.88vw,11.5px); line-height: 1.5; font-weight: 600; color: #1D2939; text-wrap: pretty; }
+.cwk-note b { font-weight: 800; color: #1D5FD6; letter-spacing: .02em; }
+.cwk, .cwk * { box-sizing: border-box; }
+.cwk { position: relative; z-index: 1; font-family: Poppins, "Segoe UI", Helvetica, Arial, sans-serif; color: #101828;
+  max-width: 1440px; margin: 0 auto; padding: clamp(12px,1.5vw,22px) clamp(12px,1.5vw,22px) clamp(14px,1.7vw,24px);
+  background: #ffffff; border: 1px solid rgba(15,47,122,.08); border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(15,47,122,.05), 0 22px 48px -26px rgba(15,47,122,.30); }
+.cwk-top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;
+  gap: 12px; padding-bottom: clamp(6px,.8vw,12px); border-bottom: 3px solid #101828; }
+.cwk-eyebrow { display: flex; align-items: center; gap: 7px; }
+.cwk-eyebrow i { display: block; width: clamp(18px,1.8vw,28px); height: 4px; border-radius: 3px; background: #E0338A; }
+.cwk-eyebrow span { font-size: clamp(8.5px,.78vw,10.5px); font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #344054; }
+.cwk h1 { margin: 4px 0 2px; font-size: clamp(19px,2.3vw,30px); line-height: 1.05; font-weight: 800; letter-spacing: -.02em; }
+.cwk-sub { margin: 2px 0 0; font-size: clamp(14px,1.7vw,19px); line-height: 1.3; font-weight: 800; font-style: italic; color: #1D5FD6; }
+.cwk-brand { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+.cwk-brand b { font-size: clamp(10.5px,.95vw,13px); font-weight: 800; letter-spacing: -.01em; }
+.cwk-brand em { font-style: normal; font-size: clamp(8.5px,.78vw,10.5px); font-weight: 700; letter-spacing: .2em; color: #1D5FD6; }
+.cwk-onetime { margin-top: clamp(8px,1vw,14px); padding: clamp(8px,1vw,14px); border-radius: 12px;
+  background: linear-gradient(135deg, #F0F5FF, #FDF0F7); border: 1px solid rgba(29,95,214,.18); }
+.cwk-onetime-hd { display: flex; align-items: center; gap: 8px; margin: 0 0 clamp(6px,.8vw,10px); }
+.cwk-onetime-hd span { font-size: clamp(8.5px,.76vw,10.5px); font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: #fff; background: #1D5FD6; padding: 4px 9px; border-radius: 999px; white-space: nowrap; }
+.cwk-onetime-hd b { font-size: clamp(12px,1.2vw,16px); font-weight: 800; letter-spacing: -.01em; color: #101828; }
+.cwk-onetime-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(6px,.7vw,11px); }
+.cwk-week { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(6px,.7vw,11px);
+  margin-top: clamp(8px,1.1vw,16px); align-items: start; }
+.cwk-day { display: flex; flex-direction: column; gap: clamp(4px,.5vw,7px); }
+.cwk-dayhd { display: flex; align-items: baseline; justify-content: space-between; gap: 4px;
+  padding: 0 1px clamp(4px,.6vw,8px); border-bottom: 2px solid #EAECF0; }
+.cwk-dayhd b { font-size: clamp(12px,1.35vw,17px); font-weight: 800; letter-spacing: .04em; }
+.cwk-call { display: block; padding: clamp(7px,.85vw,11px) clamp(8px,.9vw,12px); border-radius: 10px;
+  text-decoration: none; color: #fff; box-shadow: 0 1px 3px rgba(16,24,40,.09); transition: transform .16s ease, box-shadow .16s ease; }
+a.cwk-call:hover { transform: translateY(-3px); }
+.cwk-call .cwk-n { font-size: clamp(10.5px,1.02vw,13.5px); line-height: 1.25; font-weight: 700; letter-spacing: -.01em; }
+.cwk-call .cwk-h { font-size: clamp(9.5px,.9vw,11.5px); line-height: 1.3; font-weight: 600; margin-top: 2px; color: rgba(255,255,255,.95); }
+.cwk-call .cwk-t { font-size: clamp(9.5px,.9vw,11.5px); line-height: 1.35; font-weight: 500; margin-top: 2px; color: rgba(255,255,255,.88); }
+.cwk-call .cwk-badge { display: inline-block; margin-top: 5px; padding: 2px 7px; border-radius: 999px;
+  background: rgba(255,255,255,.22); font-size: clamp(8.5px,.74vw,10px); font-weight: 600; letter-spacing: .03em; }
+.cwk-pink { --c: #E0338A; background: #E0338A; } a.cwk-pink:hover { box-shadow: 0 12px 24px rgba(224,51,138,.32); }
+.cwk-navy { --c: #0F2F7A; background: #0F2F7A; } a.cwk-navy:hover { box-shadow: 0 12px 24px rgba(15,47,122,.34); }
+.cwk-blue { --c: #1D5FD6; background: #1D5FD6; } a.cwk-blue:hover { box-shadow: 0 12px 24px rgba(29,95,214,.34); }
+.cwk-sky { --c: #2B9BEF; background: #2B9BEF; } a.cwk-sky:hover { box-shadow: 0 12px 24px rgba(43,155,239,.34); }
+.cwk-purple { --c: #8068E6; background: #8068E6; } a.cwk-purple:hover { box-shadow: 0 12px 24px rgba(128,104,230,.34); }
+.cwk-black { --c: #14161C; background: #14161C; } a.cwk-black:hover { box-shadow: 0 12px 24px rgba(20,22,28,.34); }
+.cwk-call.cwk-soon { background: #F2F4F8; border: 1px dashed #C3CCDB; border-left: 5px solid var(--c); color: #475467; box-shadow: none; }
+.cwk-call.cwk-soon:hover { transform: none; }
+.cwk-call.cwk-soon .cwk-n { color: #1D2939; }
+.cwk-call.cwk-soon .cwk-h { color: #344054; }
+.cwk-call.cwk-soon .cwk-t { color: #667085; }
+.cwk-call.cwk-soon .cwk-badge { background: #E4E7EC; color: #475467; text-transform: uppercase; letter-spacing: .03em; }
+.cwk-call.cwk-soon .cwk-badge.cwk-first { background: #FDE3F0; color: #A81E64; text-transform: none; letter-spacing: 0; }
+.cwk-none { padding: clamp(8px,.9vw,12px); border-radius: 10px; border: 1px dashed #C3CCDB; background: #F8FAFD;
+  font-size: clamp(9.5px,.9vw,11.5px); line-height: 1.4; font-weight: 600; color: #667085; text-align: center; }
+.cwk-foot { margin: clamp(10px,1.2vw,18px) 0 0; padding-top: clamp(6px,.8vw,12px); border-top: 2px solid #EAECF0;
+  font-size: clamp(9px,.82vw,11px); line-height: 1.5; font-weight: 600; color: #344054; }
+@media (max-width: 620px) {
+  .cwk-week { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .cwk-onetime-grid { grid-template-columns: 1fr; }
+  .cwk-top { align-items: flex-start; }
+  .cwk-brand { align-items: flex-start; }
+}
+@media (max-width: 400px) { .cwk-week { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="cwk-stage">
+<div class="cwk">
+
+  <div class="cwk-top">
+    <div>
+      <div class="cwk-eyebrow"><i></i><span>Marketing BOSS</span></div>
+      <h1>BOSS Marketing Calendar</h1>
+      <p class="cwk-sub">Your weekly marketing training schedule.</p>
+    </div>
+    <div class="cwk-brand"><b>Krista Mashore</b><em>MARKETING BOSS</em></div>
+  </div>
+
+  <p class="cwk-note"><b>Reminder:</b> Have your camera on or full name displayed to avoid removal. Names like &ldquo;iPhone,&rdquo; and AI notetakers are not allowed. Raise your hand for help and have the platform you need open and ready.</p>
+
+  <div class="cwk-onetime">
+    <div class="cwk-onetime-hd"><span>One-Time Classes</span><b>Kickoff &amp; Bootcamp</b></div>
+    <div class="cwk-onetime-grid">
+      <div class="cwk-call cwk-soon cwk-pink">
+        <div class="cwk-n">Welcome &amp; Orientation</div><div class="cwk-h">with Eben</div>
+        <div class="cwk-t">Tue, Nov 10 &middot; 9:00 am PT</div><div class="cwk-t">12:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-pink">
+        <div class="cwk-n">Welcome &amp; Orientation</div><div class="cwk-h">with Eben</div>
+        <div class="cwk-t">Fri, Nov 13 &middot; Time to be confirmed</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-black">
+        <div class="cwk-n">2-Day A.I. Builder Bootcamp</div><div class="cwk-h">with Eben</div>
+        <div class="cwk-t">Wed &amp; Thu, Nov 18&ndash;19 &middot; All day both days</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+    </div>
+  </div>
+
+  <div class="cwk-week">
+
+    <div class="cwk-day">
+      <div class="cwk-dayhd"><b>MON</b></div>
+      <div class="cwk-call cwk-soon cwk-purple">
+        <div class="cwk-n">Creative Video &amp; Content With A.I.</div><div class="cwk-h">Manny Garavito</div>
+        <div class="cwk-t">8:00 am PT</div><div class="cwk-t">11:00 am ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-purple">
+        <div class="cwk-n">Professional Branding With A.I.</div><div class="cwk-h">Tom Gilmartin</div>
+        <div class="cwk-t">8:00 am PT</div><div class="cwk-t">11:00 am ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-blue">
+        <div class="cwk-n">Funnels, Ads, Sales, Marketing</div><div class="cwk-h">Warren McKee</div>
+        <div class="cwk-t">9:00 &ndash; 11:00 am PT</div><div class="cwk-t">12:00 &ndash; 2:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-navy">
+        <div class="cwk-n">Beginner Office Hours</div><div class="cwk-h">Warren McKee</div>
+        <div class="cwk-t">12:00 &ndash; 2:00 pm PT</div><div class="cwk-t">3:00 &ndash; 5:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-navy">
+        <div class="cwk-n">Advanced Office Hours</div><div class="cwk-h">Warren McKee</div>
+        <div class="cwk-t">3:00 &ndash; 5:00 pm PT</div><div class="cwk-t">6:00 &ndash; 8:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+    </div>
+
+    <div class="cwk-day">
+      <div class="cwk-dayhd"><b>TUE</b></div>
+      <div class="cwk-call cwk-soon cwk-black">
+        <div class="cwk-n">Eben Teaches Marketing &amp; A.I.</div><div class="cwk-h">Eben</div>
+        <div class="cwk-t">8:00 &ndash; 10:00 am PT</div><div class="cwk-t">11:00 am &ndash; 1:00 pm ET</div>
+        <div class="cwk-badge">60 min class + 60 min Gym</div></div>
+      <div class="cwk-call cwk-soon cwk-navy">
+        <div class="cwk-n">BOSS Office Hours &amp; Support</div>
+        <div class="cwk-t">1:00 &ndash; 2:00 pm PT</div><div class="cwk-t">4:00 &ndash; 5:00 pm ET</div>
+        <div class="cwk-badge cwk-first">First week only: 3-hour BOSS Installation Support &amp; Help, 1:00 &ndash; 4:00 pm PT</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-sky">
+        <div class="cwk-n">One to Many Marketing Training</div><div class="cwk-h">Logan &amp; Amanda</div>
+        <div class="cwk-t">1:00 pm PT</div><div class="cwk-t">4:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+    </div>
+
+    <div class="cwk-day">
+      <div class="cwk-dayhd"><b>WED</b></div>
+      <div class="cwk-call cwk-soon cwk-blue">
+        <div class="cwk-n">Funnels, Ads, Sales, Marketing</div><div class="cwk-h">Warren McKee</div>
+        <div class="cwk-t">8:00 &ndash; 10:00 am PT</div><div class="cwk-t">11:00 am &ndash; 1:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-navy">
+        <div class="cwk-n">Advanced Office Hours</div><div class="cwk-h">Warren McKee</div>
+        <div class="cwk-t">11:00 am &ndash; 1:00 pm PT</div><div class="cwk-t">2:00 &ndash; 4:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-sky">
+        <div class="cwk-n">One to Many Marketing Training</div>
+        <div class="cwk-t">12:00 pm PT</div><div class="cwk-t">3:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-navy">
+        <div class="cwk-n">Beginner Office Hours</div><div class="cwk-h">Warren McKee</div>
+        <div class="cwk-t">2:00 &ndash; 4:00 pm PT</div><div class="cwk-t">5:00 &ndash; 7:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+    </div>
+
+    <div class="cwk-day">
+      <div class="cwk-dayhd"><b>THU</b></div>
+      <div class="cwk-call cwk-soon cwk-pink">
+        <div class="cwk-n">BOSS Training with Krista</div>
+        <div class="cwk-t">9:00 am PT</div><div class="cwk-t">12:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-sky">
+        <div class="cwk-n">One to Many Marketing Training</div><div class="cwk-h">Logan &amp; Amanda</div>
+        <div class="cwk-t">1:00 pm PT</div><div class="cwk-t">4:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+    </div>
+
+    <div class="cwk-day">
+      <div class="cwk-dayhd"><b>FRI</b></div>
+      <div class="cwk-none">No regular classes</div>
+    </div>
+
+  </div>
+
+  <p class="cwk-foot">All times are Pacific (PT) with Eastern (ET) shown. All calls are subject to change or removal at any time based on student need and team capacity.</p>
+
+</div>
+</div>
+
+</body>
+</html>
