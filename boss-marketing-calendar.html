@@ -105,10 +105,10 @@ a.cwk-call:hover { transform: translateY(-3px); }
   border: 2px solid #D0D5DD; background: #fff; color: #344054; transition: all .15s ease; }
 .cwk-tablist label b { font-size: clamp(12px,1.2vw,15px); font-weight: 800; }
 .cwk-tablist label span { font-size: clamp(9.5px,.9vw,11.5px); font-weight: 600; }
-#cwk-wk1:checked ~ .cwk-tablist label[for="cwk-wk1"], #cwk-wk2:checked ~ .cwk-tablist label[for="cwk-wk2"], #cwk-wk3:checked ~ .cwk-tablist label[for="cwk-wk3"] { background: #1D5FD6; border-color: #1D5FD6; color: #fff; }
-#cwk-wk1:focus-visible ~ .cwk-tablist label[for="cwk-wk1"], #cwk-wk2:focus-visible ~ .cwk-tablist label[for="cwk-wk2"], #cwk-wk3:focus-visible ~ .cwk-tablist label[for="cwk-wk3"] { outline: 3px solid #E0338A; outline-offset: 2px; }
+#cwk-wk1:checked ~ .cwk-tablist label[for="cwk-wk1"], #cwk-wk2:checked ~ .cwk-tablist label[for="cwk-wk2"], #cwk-wk3:checked ~ .cwk-tablist label[for="cwk-wk3"], #cwk-wk4:checked ~ .cwk-tablist label[for="cwk-wk4"] { background: #1D5FD6; border-color: #1D5FD6; color: #fff; }
+#cwk-wk1:focus-visible ~ .cwk-tablist label[for="cwk-wk1"], #cwk-wk2:focus-visible ~ .cwk-tablist label[for="cwk-wk2"], #cwk-wk3:focus-visible ~ .cwk-tablist label[for="cwk-wk3"], #cwk-wk4:focus-visible ~ .cwk-tablist label[for="cwk-wk4"] { outline: 3px solid #E0338A; outline-offset: 2px; }
 .cwk-pane { display: none; }
-#cwk-wk1:checked ~ .cwk-p1, #cwk-wk2:checked ~ .cwk-p2, #cwk-wk3:checked ~ .cwk-p3 { display: block; }
+#cwk-wk1:checked ~ .cwk-p1, #cwk-wk2:checked ~ .cwk-p2, #cwk-wk3:checked ~ .cwk-p3, #cwk-wk4:checked ~ .cwk-p4 { display: block; }
 .cwk-dayhd span { font-size: clamp(9.5px,.9vw,11.5px); font-weight: 700; color: #667085; }
 </style>
 </head>
@@ -132,10 +132,12 @@ a.cwk-call:hover { transform: translateY(-3px); }
     <input type="radio" name="cwk-wk" id="cwk-wk1" class="cwk-r" checked>
     <input type="radio" name="cwk-wk" id="cwk-wk2" class="cwk-r">
     <input type="radio" name="cwk-wk" id="cwk-wk3" class="cwk-r">
+    <input type="radio" name="cwk-wk" id="cwk-wk4" class="cwk-r">
     <div class="cwk-tablist">
       <label for="cwk-wk1"><b>Week 1</b><span>Nov 9 &ndash; 13 &middot; Kickoff</span></label>
       <label for="cwk-wk2"><b>Week 2</b><span>Nov 16 &ndash; 20 &middot; Installation</span></label>
       <label for="cwk-wk3"><b>Week 3</b><span>Nov 23 &ndash; 27</span></label>
+      <label for="cwk-wk4"><b>Week 4</b><span>Nov 30 &ndash; Dec 4</span></label>
     </div>
     <div class="cwk-pane cwk-p1">
   <div class="cwk-week">
@@ -280,6 +282,84 @@ a.cwk-call:hover { transform: translateY(-3px); }
 
   </div>
     </div>
+    <div class="cwk-pane cwk-p4">
+    <div class="cwk-week">
+
+    <div class="cwk-day">
+      <div class="cwk-dayhd"><b>MON</b><span>Nov 30</span></div>
+      <div class="cwk-call cwk-soon cwk-purple">
+        <div class="cwk-n">Professional Branding With A.I.</div><div class="cwk-h">Tom Gilmartin</div>
+        <div class="cwk-t">8:00 am PT</div><div class="cwk-t">11:00 am ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-blue">
+        <div class="cwk-n">Funnels, Ads, Sales, Marketing</div><div class="cwk-h">Warren McKee</div>
+        <div class="cwk-t">9:00 &ndash; 11:00 am PT</div><div class="cwk-t">12:00 &ndash; 2:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-navy">
+        <div class="cwk-n">Beginner Office Hours</div><div class="cwk-h">Warren McKee</div>
+        <div class="cwk-t">12:00 &ndash; 2:00 pm PT</div><div class="cwk-t">3:00 &ndash; 5:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-navy">
+        <div class="cwk-n">Advanced Office Hours</div><div class="cwk-h">Warren McKee</div>
+        <div class="cwk-t">3:00 &ndash; 5:00 pm PT</div><div class="cwk-t">6:00 &ndash; 8:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+    </div>
+
+    <div class="cwk-day">
+      <div class="cwk-dayhd"><b>TUE</b><span>Dec 1</span></div>
+      <a class="cwk-call cwk-black" href="https://us02web.zoom.us/meeting/register/tZ0tdemqpjwjHtHX1GTmkGamzFwkpA_ny7E0" target="_blank" rel="noopener noreferrer">
+        <div class="cwk-n">Eben Teaches Marketing &amp; A.I.</div><div class="cwk-h">Eben</div>
+        <div class="cwk-t">9:00 &ndash; 11:00 am PT</div><div class="cwk-t">12:00 &ndash; 2:00 pm ET</div>
+        <div class="cwk-badge">60 min class + 60 min Gym</div></a>
+      <div class="cwk-call cwk-soon cwk-navy">
+        <div class="cwk-n">BOSS Office Hours</div>
+        <div class="cwk-t">1:00 &ndash; 2:00 pm PT</div><div class="cwk-t">4:00 &ndash; 5:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-sky">
+        <div class="cwk-n">One to Many Marketing Training</div><div class="cwk-h">Logan &amp; Amanda</div>
+        <div class="cwk-t">1:00 pm PT</div><div class="cwk-t">4:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+    </div>
+
+    <div class="cwk-day">
+      <div class="cwk-dayhd"><b>WED</b><span>Dec 2</span></div>
+      <div class="cwk-call cwk-soon cwk-blue">
+        <div class="cwk-n">Funnels, Ads, Sales, Marketing</div><div class="cwk-h">Warren McKee</div>
+        <div class="cwk-t">8:00 &ndash; 10:00 am PT</div><div class="cwk-t">11:00 am &ndash; 1:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-navy">
+        <div class="cwk-n">Advanced Office Hours</div><div class="cwk-h">Warren McKee</div>
+        <div class="cwk-t">11:00 am &ndash; 1:00 pm PT</div><div class="cwk-t">2:00 &ndash; 4:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-sky">
+        <div class="cwk-n">One to Many Marketing Training</div>
+        <div class="cwk-t">12:00 pm PT</div><div class="cwk-t">3:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-navy">
+        <div class="cwk-n">Beginner Office Hours</div><div class="cwk-h">Warren McKee</div>
+        <div class="cwk-t">2:00 &ndash; 4:00 pm PT</div><div class="cwk-t">5:00 &ndash; 7:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+    </div>
+
+    <div class="cwk-day">
+      <div class="cwk-dayhd"><b>THU</b><span>Dec 3</span></div>
+      <div class="cwk-call cwk-soon cwk-pink">
+        <div class="cwk-n">BOSS Training with Krista</div>
+        <div class="cwk-t">9:00 am PT</div><div class="cwk-t">12:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+      <div class="cwk-call cwk-soon cwk-sky">
+        <div class="cwk-n">One to Many Marketing Training</div><div class="cwk-h">Logan &amp; Amanda</div>
+        <div class="cwk-t">1:00 pm PT</div><div class="cwk-t">4:00 pm ET</div>
+        <div class="cwk-badge">Link Coming Soon</div></div>
+    </div>
+
+    <div class="cwk-day">
+      <div class="cwk-dayhd"><b>FRI</b><span>Dec 4</span></div>
+      <div class="cwk-none">No regular classes</div>
+    </div>
+
+  </div>
+    </div>
   </div>
 
   <p class="cwk-foot">All times are Pacific (PT) with Eastern (ET) shown. All calls are subject to change or removal at any time based on student need and team capacity.</p>
@@ -288,7 +368,7 @@ a.cwk-call:hover { transform: translateY(-3px); }
 </div>
 
 <script>
-try { var n = new Date(); if (n >= new Date(2026, 10, 21)) document.getElementById('cwk-wk3').checked = true; else if (n >= new Date(2026, 10, 14)) document.getElementById('cwk-wk2').checked = true; } catch (e) {}
+try { var n = new Date(); if (n >= new Date(2026, 10, 28)) document.getElementById('cwk-wk4').checked = true; else if (n >= new Date(2026, 10, 21)) document.getElementById('cwk-wk3').checked = true; else if (n >= new Date(2026, 10, 14)) document.getElementById('cwk-wk2').checked = true; } catch (e) {}
 </script>
 </body>
 </html>
