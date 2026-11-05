@@ -37,6 +37,7 @@ Several people edit this repo from their own computers, so your local copy may b
 | `kmo-calendar.html` | KMO Calendar |
 | `30-day-success-plan.html` | 30 Day Success Plan |
 | `boss-support-calendar.html` | Boss Support Calendar |
+| `marketing-boss-training-calendar.html` | Marketing Boss One-to-Many Marketing Training Calendar (new Nov 5, 2026; not part of the 9-calendar sync/spreadsheet unless asked) |
 | `boss-training-and-support-calendar.html` | BOSS Training and Support (small two-day page for Krista/Evan: Tue + Thu only; Thu 9 am BOSS Training with Krista is a pink graphic-only card with no link, by request) |
 | `boss-marketing-calendar.html` | BOSS Marketing Calendar (added Nov 4, 2026; blue/pink/black palette from the Marketing BOSS graphic; shows PT with ET; every call is an unlinked "Link Coming Soon" card until links are given; no Skin in the Game banner; Friday has no regular classes; one-time Nov 10 / Nov 13 / Nov 18-19 classes sit in a strip above the week) |
 
@@ -78,6 +79,8 @@ Memory does not carry between people or computers, so track anything dated here.
 - **Summit Skill Competition is fully removed (Oct 28, 2026).** The Wednesday call on Boss + AI Mastermind is back to "BOSS training with Krista" (link `…register/LxdyHKZWTqG7dDr0asiMug`), AI Mastermind's Monday call is "Mastermind with Krista" (9:00-10:00 am PST, link `…j/86901943905?pwd=…`, badge "PW 298664"), and Boss has NO Monday 9 am call. Do not re-add one unless the user asks.
 - **Book Club is off the calendars for now.** The regular Tuesday "KMC Book Club" was removed on Oct 5, 2026, and the one-off "KMC Book Club - The Thinking Effect" placeholder (Wed Oct 28) was removed from all 9 calendars on Oct 21, 2026, because the boss is deciding the future and best time for Book Club. The Dec 3 one-off (added and cancelled Nov 2, 2026) was also removed; the user said a new date will be picked in January. Do not add any Book Club back unless the user says so.
 - **KMC Student Panel Call on the 30 Day Success Plan, Thu Nov 5, 2026, 9:00 am PST.** Linked (purple card, badge "Thu, Nov 5") as of Nov 2, 2026 with `https://us06web.zoom.us/j/83918147652?pwd=bjZYE1f0zsVxE0bB8iq9fIaUUKOczz.1` (the same room as the Success Plan Thursday 8 am Office Hours). It was a locked placeholder before that. Remove it after the call unless it repeats; once Nov 5 has passed, tell the user it is ready to remove.
+
+- **Marketing Boss One-to-Many Marketing Training Calendar (`marketing-boss-training-calendar.html`, created Nov 5, 2026 from an image the user sent).** Every call is an unlinked `cwk-soon` card with "Link Coming Soon" because no links were given; when links arrive, change each `<div>` to an `<a class="cwk-call cwk-<color>" href="..." target="_blank" rel="noopener noreferrer">` and drop `cwk-soon` and the badge. Times are shown as PT with ET in parentheses. The "One-Time Classes" box holds Tue Nov 10 and Fri Nov 13 Welcome & Orientation with Eben (Nov 13 time still to be confirmed) and the Wed-Thu Nov 18-19 2-Day A.I. Builder Bootcamp; the Tuesday BOSS Installation Workshop card is Nov 17 only. Remove the one-time items after their dates (Nov 19 for the last) and ask the user whether to take the Nov 17 workshop card off.
 
 ## Creating a new calendar
 
