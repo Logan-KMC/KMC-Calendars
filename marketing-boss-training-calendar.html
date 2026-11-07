@@ -86,6 +86,10 @@ html::-webkit-scrollbar-track{background:#E4DAF6;}
 html::-webkit-scrollbar-thumb{background:#EC1C82;border-radius:8px;border:3px solid #E4DAF6;}
 .cwk-scrollhint{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:50;padding:8px 16px;border-radius:999px;background:#101828;color:#fff;font:800 12px Poppins,"Segoe UI",Arial,sans-serif;letter-spacing:.03em;box-shadow:0 6px 16px rgba(16,24,40,.35);pointer-events:none;transition:opacity .25s ease;white-space:nowrap;}
 .cwk-scrollhint.cwk-hide{opacity:0;}
+.cwk-skin{display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px;margin:0 0 14px;padding:10px 16px;border-radius:12px;background:linear-gradient(180deg,#27508F 0%,#0F2B5C 55%,#0A1D45 100%);box-shadow:0 3px 0 #061330;}
+.cwk-skin .cwk-skin-tag{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:#fff;background:#EC1C82;padding:4px 10px;border-radius:999px;}
+.cwk-skin .cwk-skin-ttl{font-size:16px;font-weight:800;color:#fff;letter-spacing:-.01em;}
+.cwk-skin .cwk-skin-txt{font-size:12px;font-weight:500;color:rgba(255,255,255,.85);}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -104,6 +108,12 @@ html::-webkit-scrollbar-thumb{background:#EC1C82;border-radius:8px;border:3px so
 <div class="cwk-scrollhint" id="cwk-scrollhint" aria-hidden="true">Scroll down for more &#9662;</div>
 <div class="cwk-wrap">
 <div class="cwk-card">
+
+  <div class="cwk-skin">
+    <span class="cwk-skin-tag">Every Day</span>
+    <span class="cwk-skin-ttl">Daily Skin in the Game</span>
+    <span class="cwk-skin-txt">Show up, take action, and keep your momentum going every single day.</span>
+  </div>
 
   <div class="cwk-tabs">
     <input type="radio" name="cwk-wk" id="cwk-wk1" class="cwk-r" checked>
