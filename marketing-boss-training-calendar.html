@@ -80,6 +80,12 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
 .cwk-call.cwk-off.cwk-off-sm{min-height:90px;padding:16px 8px;}
 .cwk-call.cwk-off.cwk-off-sm .cwk-n{font-size:15px;}
 .cwk-call.cwk-off.cwk-off-sm .cwk-ic-lg{width:34px;height:34px;margin-bottom:6px;}
+html{scrollbar-width:auto;scrollbar-color:#EC1C82 #E4DAF6;}
+html::-webkit-scrollbar{width:14px;}
+html::-webkit-scrollbar-track{background:#E4DAF6;}
+html::-webkit-scrollbar-thumb{background:#EC1C82;border-radius:8px;border:3px solid #E4DAF6;}
+.cwk-scrollhint{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:50;padding:8px 16px;border-radius:999px;background:#101828;color:#fff;font:800 12px Poppins,"Segoe UI",Arial,sans-serif;letter-spacing:.03em;box-shadow:0 6px 16px rgba(16,24,40,.35);pointer-events:none;transition:opacity .25s ease;white-space:nowrap;}
+.cwk-scrollhint.cwk-hide{opacity:0;}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -95,6 +101,7 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
 <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 17h.01M12 17h.01"/></symbol>
 </svg>
 
+<div class="cwk-scrollhint" id="cwk-scrollhint" aria-hidden="true">Scroll down for more &#9662;</div>
 <div class="cwk-wrap">
 <div class="cwk-card">
 
@@ -252,6 +259,14 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
 
 <script>
 try { var n = new Date(); if (n >= new Date(2026, 10, 28)) document.getElementById('cwk-wk4').checked = true; else if (n >= new Date(2026, 10, 21)) document.getElementById('cwk-wk3').checked = true; else if (n >= new Date(2026, 10, 14)) document.getElementById('cwk-wk2').checked = true; } catch (e) {}
+</script>
+<script>
+(function(){var h=document.getElementById('cwk-scrollhint');if(!h)return;
+function u(){var d=document.documentElement,left=d.scrollHeight-(window.pageYOffset||d.scrollTop)-window.innerHeight;
+h.classList.toggle('cwk-hide',left<40);}
+window.addEventListener('scroll',u,{passive:true});window.addEventListener('resize',u);
+document.addEventListener('change',function(){setTimeout(u,0);});
+window.addEventListener('load',u);u();})();
 </script>
 </body>
 </html>
