@@ -44,6 +44,26 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
 .cwk-announce .cwk-announce-date{display:inline-block;margin:2px 0 8px;padding:3px 9px;border-radius:999px;background:#FEF0C7;font-size:11px;font-weight:700;color:#B54708;}
 @media (max-width:620px){.cwk-week{grid-template-columns:repeat(2,minmax(0,1fr));} .cwk-top{align-items:flex-start;} .cwk-brand{align-items:flex-start;}}
 @media (max-width:400px){.cwk-week{grid-template-columns:1fr;}}
+.cwk-mod { position: relative; overflow: hidden; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: clamp(12px,1.6vw,22px); margin: 0 0 clamp(10px,1.2vw,16px); padding: clamp(16px,2vw,28px) clamp(16px,2.2vw,32px);
+  border-radius: 18px; color: #fff; background: linear-gradient(105deg, #E6197A 0%, #F03E3E 48%, #F26A10 100%);
+  box-shadow: 0 14px 30px -14px rgba(230,25,122,.65); }
+.cwk-mod::before { content: ""; position: absolute; right: -60px; top: -80px; width: 260px; height: 260px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,214,0,.55), rgba(255,214,0,0) 68%); pointer-events: none; }
+.cwk-mod::after { content: ""; position: absolute; left: -50px; bottom: -90px; width: 220px; height: 220px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,.28), rgba(255,255,255,0) 68%); pointer-events: none; }
+.cwk-mod > * { position: relative; z-index: 1; }
+.cwk-mod-main { flex: 1 1 380px; min-width: 0; display: flex; align-items: flex-start; gap: clamp(12px,1.4vw,20px); }
+.cwk-mod-icon { flex: 0 0 auto; width: clamp(48px,5vw,68px); height: clamp(48px,5vw,68px); }
+.cwk-mod-eyebrow { display: inline-block; padding: 5px 12px; border-radius: 999px; background: #FFE600; color: #7A1038;
+  font-size: clamp(11px,1vw,13.5px); font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.cwk-mod h2 { margin: 8px 0 4px; font-size: clamp(25px,3.7vw,50px); line-height: 1.02; font-weight: 900; letter-spacing: -.02em;
+  text-transform: uppercase; text-shadow: 0 2px 0 rgba(120,10,50,.28); }
+.cwk-mod-date { display: inline-block; margin: 2px 0 8px; padding: 3px 12px; border-radius: 8px; background: #fff; color: #E6197A;
+  font-size: clamp(15px,1.8vw,23px); font-weight: 900; letter-spacing: .04em; }
+.cwk-mod-away { margin: 0; padding: 8px 12px; border-radius: 10px; background: rgba(90,10,40,.34);
+  font-size: clamp(13px,1.2vw,16px); line-height: 1.4; font-weight: 700; }
+@media (max-width: 620px) { .cwk-mod-icon { display: none; } }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -52,6 +72,23 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
 <div class="cwk-wrap">
 <div class="cwk-card">
 
+  <!-- MODIFIED SCHEDULE BANNER (Nov 10-13, 2026): remove this whole cwk-mod block after Nov 13, 2026. -->
+  <div class="cwk-mod" role="note" aria-label="Modified coaching schedule, November 10 to 13, 2026">
+    <div class="cwk-mod-main">
+      <svg class="cwk-mod-icon" viewBox="0 0 64 64" aria-hidden="true">
+        <rect x="6" y="12" width="52" height="46" rx="9" fill="#fff"/>
+        <path d="M6 21a9 9 0 0 1 9-9h34a9 9 0 0 1 9 9v6H6z" fill="#FFE600"/>
+        <rect x="18" y="5" width="6" height="14" rx="3" fill="#7A1038"/><rect x="40" y="5" width="6" height="14" rx="3" fill="#7A1038"/>
+        <g fill="#E6197A"><rect x="14" y="34" width="8" height="7" rx="2"/><rect x="28" y="34" width="8" height="7" rx="2"/><rect x="42" y="34" width="8" height="7" rx="2"/><rect x="14" y="46" width="8" height="7" rx="2"/><rect x="28" y="46" width="8" height="7" rx="2" fill="#F26A10"/></g>
+      </svg>
+      <div>
+        <span class="cwk-mod-eyebrow">&#128227; Important Schedule Update!</span>
+        <h2>Modified Coaching Schedule</h2>
+        <span class="cwk-mod-date">NOVEMBER 10&ndash;13, 2026</span>
+        <p class="cwk-mod-away">&#127796; Our team is away for a working retreat this week!</p>
+      </div>
+    </div>
+  </div>
   <div class="cwk-top">
     <div>
       <div class="cwk-eyebrow"><i></i><span>The Mashore Blueprint</span></div>
@@ -64,12 +101,6 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
   <!-- ANNOUNCEMENTS: To add a new pinned announcement, copy one entire "cwk-announce" block below (from <div class="cwk-announce"> to its closing </div>), paste it, and edit the text. Put the newest/most important announcement first. -->
   <div class="cwk-announcements">
     <div class="cwk-announcements-hd"><span>&#128204;</span> Announcements</div>
-
-    <div class="cwk-announce">
-      <h3>Team Retreat &amp; Training &mdash; Modified Schedule</h3>
-      <span class="cwk-announce-date">Tue&ndash;Fri, November 10&ndash;13</span>
-      <p>Our team will be away for a team retreat, training, and planning!</p>
-    </div>
 
     <div class="cwk-announce">
       <h3>Magazine &amp; Newsletter Skill Workshop with Doug &mdash; Pin This!</h3>
@@ -93,25 +124,19 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
     <div class="cwk-day">
       <div class="cwk-dayhd">TUE</div>
       <a class="cwk-call cwk-navy" href="https://us06web.zoom.us/j/89184496885?pwd=OCBLIJQ2UimxIHB8glXrmxDxWQab8w.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Mashore Method Office Hours</div><div class="cwk-t">9:00 &ndash; 10:00 am PST</div></a>
-      <a class="cwk-call cwk-green" href="https://us06web.zoom.us/j/87236310294?pwd=aYQFCGKga2BhcXbrgb7dJ7ApJm1hfR.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Boss Office Hours</div><div class="cwk-t">1:00 &ndash; 2:00 pm PST</div></a>
     </div>
 
     <div class="cwk-day">
       <div class="cwk-dayhd">WED</div>
-      <a class="cwk-call cwk-pink" href="https://us06web.zoom.us/meeting/register/LxdyHKZWTqG7dDr0asiMug" target="_blank" rel="noopener noreferrer"><div class="cwk-n">BOSS training with Krista</div><div class="cwk-t">9:00 am PST</div></a>
     </div>
 
     <div class="cwk-day">
       <div class="cwk-dayhd">THU</div>
       <a class="cwk-call cwk-navy" href="https://us06web.zoom.us/j/89184496885?pwd=OCBLIJQ2UimxIHB8glXrmxDxWQab8w.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Mashore Method Office Hours</div><div class="cwk-t">9:00 &ndash; 10:00 am PST</div></a>
-      <a class="cwk-call cwk-green" href="https://us06web.zoom.us/j/87236310294?pwd=aYQFCGKga2BhcXbrgb7dJ7ApJm1hfR.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Boss Office Hours</div><div class="cwk-t">1:00 &ndash; 2:00 pm PST</div></a>
     </div>
 
     <div class="cwk-day">
       <div class="cwk-dayhd">FRI</div>
-      <a class="cwk-call cwk-green" href="https://us06web.zoom.us/j/81358161354?pwd=Z5bR9lsVFGMqy05RbfPrhoDWsZ8F3K.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Boss Office Hours</div><div class="cwk-t">8:00 am PST</div></a>
-      <a class="cwk-call cwk-blue" href="https://us06web.zoom.us/j/84883700855?pwd=lCb08uvnuTdzAWG7HNtr8rBWlQM7ka.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Power Hour with Vickee</div><div class="cwk-t">9:00 am PST</div></a>
-      <a class="cwk-call cwk-purple" href="https://us06web.zoom.us/meeting/register/L8KgnZtuS-a6VeoyLw4WHA" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Magazine Skill Follow-Up</div><div class="cwk-t">11:00 am PST</div></a>
       <a class="cwk-call cwk-navy" href="https://us06web.zoom.us/j/88119010649?pwd=err0fWRwlzTzTgFWBKDs2mZGwgMgEw.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Mashore Method Office Hours</div><div class="cwk-t">1:00 &ndash; 2:00 pm PST</div></a>
     </div>
 
