@@ -278,5 +278,12 @@ window.addEventListener('scroll',u,{passive:true});window.addEventListener('resi
 document.addEventListener('change',function(){setTimeout(u,0);});
 window.addEventListener('load',u);u();})();
 </script>
+<script>
+(function(){var w=document.querySelector('.cwk-wrap');if(!w)return;
+function fit(){w.style.zoom=1;var vh=window.innerHeight,z=1;
+for(var i=0;i<8;i++){var h=w.getBoundingClientRect().height;if(h<=vh+1||z<=0.55)break;z=Math.max(0.55,z*vh/h);w.style.zoom=z;}
+var sh=document.getElementById('cwk-scrollhint');if(sh&&z<1)sh.style.display='none';}
+window.addEventListener('resize',fit);window.addEventListener('load',fit);document.addEventListener('change',function(){setTimeout(fit,0);});fit();})();
+</script>
 </body>
 </html>
