@@ -278,13 +278,5 @@ window.addEventListener('scroll',u,{passive:true});window.addEventListener('resi
 document.addEventListener('change',function(){setTimeout(u,0);});
 window.addEventListener('load',u);u();})();
 </script>
-<script>
-(function(){var w=document.querySelector('.cwk-wrap');if(!w)return;
-function H(z){w.style.zoom=z;return w.getBoundingClientRect().height;}
-function fit(){var vh=window.innerHeight-2,z=1,lo=0.35,hi=1;
-if(H(1)>vh){for(var i=0;i<16;i++){var m=(lo+hi)/2;if(H(m)<=vh)lo=m;else hi=m;}z=lo;}
-H(z);var sh=document.getElementById('cwk-scrollhint');if(sh&&H(z)<=vh+2)sh.style.display='none';}
-window.addEventListener('resize',fit);window.addEventListener('load',fit);document.addEventListener('change',function(){setTimeout(fit,0);});fit();})();
-</script>
 </body>
 </html>
