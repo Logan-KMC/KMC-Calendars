@@ -7,6 +7,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
 <style>
 html,body{margin:0;padding:0;background:#F3F7FD;}
+html{overflow-y:scroll;scrollbar-width:auto;scrollbar-color:#1D5FD6 #DCE6F7;}
+html::-webkit-scrollbar{width:14px;}
+html::-webkit-scrollbar-track{background:#DCE6F7;}
+html::-webkit-scrollbar-thumb{background:#1D5FD6;border-radius:8px;border:3px solid #DCE6F7;}
+.cwk-scrollhint{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:50;padding:8px 16px;border-radius:999px;background:#101828;color:#fff;font:800 12px Poppins,"Segoe UI",Arial,sans-serif;letter-spacing:.03em;box-shadow:0 6px 16px rgba(16,24,40,.35);pointer-events:none;transition:opacity .25s ease;white-space:nowrap;}
+.cwk-scrollhint.cwk-hide{opacity:0;}
 .cwk-stage, .cwk-stage * { box-sizing: border-box; }
 .cwk-stage { position: relative; overflow: hidden; width: 100%;
   padding: clamp(10px,1.4vw,22px); background: #F3F7FD; isolation: isolate; }
@@ -114,6 +120,7 @@ a.cwk-call:hover { transform: translateY(-3px); }
 </style>
 </head>
 <body>
+<div class="cwk-scrollhint" id="cwk-scrollhint" aria-hidden="true">Scroll down for more &#9662;</div>
 
 <div class="cwk-stage">
 <div class="cwk">
@@ -350,6 +357,14 @@ a.cwk-call:hover { transform: translateY(-3px); }
 
 <script>
 try { var n = new Date(); if (n >= new Date(2026, 10, 28)) document.getElementById('cwk-wk4').checked = true; else if (n >= new Date(2026, 10, 21)) document.getElementById('cwk-wk3').checked = true; else if (n >= new Date(2026, 10, 14)) document.getElementById('cwk-wk2').checked = true; } catch (e) {}
+</script>
+<script>
+(function(){var h=document.getElementById('cwk-scrollhint');if(!h)return;
+function u(){var d=document.documentElement,left=d.scrollHeight-(window.pageYOffset||d.scrollTop)-window.innerHeight;
+h.classList.toggle('cwk-hide',left<40);}
+window.addEventListener('scroll',u,{passive:true});window.addEventListener('resize',u);
+document.addEventListener('change',function(){setTimeout(u,0);});
+window.addEventListener('load',u);u();})();
 </script>
 </body>
 </html>
