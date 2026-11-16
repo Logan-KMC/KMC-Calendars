@@ -80,16 +80,18 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
 .cwk-call.cwk-off.cwk-off-sm{min-height:90px;padding:16px 8px;}
 .cwk-call.cwk-off.cwk-off-sm .cwk-n{font-size:15px;}
 .cwk-call.cwk-off.cwk-off-sm .cwk-ic-lg{width:34px;height:34px;margin-bottom:6px;}
-html{overflow-y:scroll;scrollbar-width:auto;scrollbar-color:#EC1C82 #E4DAF6;}
-html::-webkit-scrollbar{width:14px;}
-html::-webkit-scrollbar-track{background:#E4DAF6;}
-html::-webkit-scrollbar-thumb{background:#EC1C82;border-radius:8px;border:3px solid #E4DAF6;}
+html,body{height:100%;overflow:hidden;}
+.cwk-wrap{height:100%;overflow-y:scroll;overflow-x:hidden;background-attachment:local;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;scrollbar-width:auto;scrollbar-color:#EC1C82 #E4DAF6;}
+.cwk-wrap::-webkit-scrollbar{width:14px;}
+.cwk-wrap::-webkit-scrollbar-track{background:#E4DAF6;}
+.cwk-wrap::-webkit-scrollbar-thumb{background:#EC1C82;border-radius:8px;border:3px solid #E4DAF6;}
 .cwk-scrollhint{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:50;padding:8px 16px;border-radius:999px;background:#101828;color:#fff;font:800 12px Poppins,"Segoe UI",Arial,sans-serif;letter-spacing:.03em;box-shadow:0 6px 16px rgba(16,24,40,.35);pointer-events:none;transition:opacity .25s ease;white-space:nowrap;}
 .cwk-scrollhint.cwk-hide{opacity:0;}
 .cwk-skin{display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px;margin:0 0 14px;padding:10px 16px;border-radius:12px;background:linear-gradient(180deg,#27508F 0%,#0F2B5C 55%,#0A1D45 100%);box-shadow:0 3px 0 #061330;}
 .cwk-skin .cwk-skin-tag{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:#fff;background:#EC1C82;padding:4px 10px;border-radius:999px;}
 .cwk-skin .cwk-skin-ttl{font-size:16px;font-weight:800;color:#fff;letter-spacing:-.01em;}
 .cwk-skin .cwk-skin-txt{font-size:12px;font-weight:500;color:rgba(255,255,255,.85);}
+@media (max-width:900px){.cwk-day{gap:5px;} .cwk-dayhd{padding:6px 2px;} .cwk-call{padding:7px 6px 9px;} .cwk-call .cwk-n{font-size:10.5px;line-height:1.15;} .cwk-call .cwk-t{font-size:9px;line-height:1.25;margin-top:2px;} .cwk-call .cwk-badge{font-size:7.5px;padding:1px 5px;margin-top:3px;}}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -271,10 +273,10 @@ html::-webkit-scrollbar-thumb{background:#EC1C82;border-radius:8px;border:3px so
 try { var n = new Date(); if (n >= new Date(2026, 10, 28)) document.getElementById('cwk-wk4').checked = true; else if (n >= new Date(2026, 10, 21)) document.getElementById('cwk-wk3').checked = true; else if (n >= new Date(2026, 10, 14)) document.getElementById('cwk-wk2').checked = true; } catch (e) {}
 </script>
 <script>
-(function(){var h=document.getElementById('cwk-scrollhint');if(!h)return;
-function u(){var d=document.documentElement,left=d.scrollHeight-(window.pageYOffset||d.scrollTop)-window.innerHeight;
+(function(){var h=document.getElementById('cwk-scrollhint'),w=document.querySelector('.cwk-wrap');if(!h||!w)return;
+function u(){var left=w.scrollHeight-w.scrollTop-w.clientHeight;
 h.classList.toggle('cwk-hide',left<40);}
-window.addEventListener('scroll',u,{passive:true});window.addEventListener('resize',u);
+w.addEventListener('scroll',u,{passive:true});window.addEventListener('resize',u);
 document.addEventListener('change',function(){setTimeout(u,0);});
 window.addEventListener('load',u);u();})();
 </script>
