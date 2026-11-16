@@ -57,6 +57,8 @@ For time zones, match the label the file already uses (`PT` in most files, `PST`
 - The Google Fonts `<link>` and the `<style>` block stay in `<head>`.
 - Don't touch calls, days or hosts that weren't part of the request. These are live schedules students rely on.
 
+- **Every call must stay reachable, on every calendar and every week (user request Nov 16, 2026).** The pages run inside a GHL iframe of limited height, and a student reported Week 4 of the Marketing Boss calendar had calls cut off with no way to scroll. Whenever you add calls to ANY calendar (or a week tab), make sure students can still reach every call: check the page at about 650 px wide and a short height, and keep the footer note reachable. The Marketing Boss page (`marketing-boss-training-calendar.html`) now scrolls inside its own `.cwk-wrap` container (`html,body{height:100%;overflow:hidden}`, `.cwk-wrap{height:100%;overflow-y:scroll;background-attachment:local}`, pink scrollbar, "Scroll down for more" hint driven by `.cwk-wrap`) and has tighter cards under 900 px; keep both when editing it, and expect more calls to be added to its weeks. The other calendars still use normal page scrolling; if one gets taller (more calls) or a student can't reach the bottom, give it the same inner-scroll container and tighter cards.
+
 ## Standing rules between calendars
 
 - **Shared calls use the same link everywhere** (the Monday 8 am Coaching Call, Mashore Method Office Hours, and others). When a shared link or time changes, search every file for the old link (`grep`) and update every occurrence, unless told to change only one calendar.
