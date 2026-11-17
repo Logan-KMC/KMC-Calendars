@@ -36,7 +36,6 @@ As of the last time this was written, the calendars living here are:
 | `Elite-blueprint-support-calendar.html` | Elite Support Calendar |
 | `mashore-blueprint-cab-support-calendar.html` | CAB Support Calendar |
 | `ai-for-agents-blueprint-support-calendar.html` | AI For Agents Blueprint Support Calendar |
-| `ai-cab-support-calendar.html` | AI CAB Support Calendar |
 | `kmo-calendar.html` | KMO Calendar |
 | `ai-mastermind-call-calendar.html` | AI Mastermind Call Calendar |
 | `30-day-success-plan.html` | 30 Day Success Plan |
