@@ -280,5 +280,16 @@ w.addEventListener('scroll',u,{passive:true});window.addEventListener('resize',u
 document.addEventListener('change',function(){setTimeout(u,0);});
 window.addEventListener('load',u);u();})();
 </script>
+<script>
+/* Fit to the part of the embed students can actually see. If the lesson page clips the iframe (iframe taller than the visible box), size the scroll area to the visible part so the scrollbar and the last calls are reachable. */
+(function(){var w=document.querySelector('.cwk-wrap');if(!w||!('IntersectionObserver' in window))return;
+var p=document.createElement('div');p.setAttribute('aria-hidden','true');p.style.cssText='position:fixed;left:0;top:0;width:2px;height:100%;pointer-events:none;visibility:hidden;';document.body.appendChild(p);
+var th=[];for(var i=0;i<=100;i++)th.push(i/100);
+new IntersectionObserver(function(es){var e=es[es.length-1],r=e.intersectionRect,full=window.innerHeight;
+if(!e.isIntersecting||!r||r.height<=0)return;
+var vis=Math.round(r.bottom);
+if(vis>=full-2){w.style.height='';}else{w.style.height=Math.max(320,Math.min(full,vis))+'px';}
+w.dispatchEvent(new Event('scroll'));},{threshold:th}).observe(p);})();
+</script>
 </body>
 </html>
