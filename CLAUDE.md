@@ -84,7 +84,7 @@ Memory does not carry between people or computers, so track anything dated here.
 
 - **Retreat week (Nov 10-13, 2026) is over; cleaned up Nov 15, 2026.** The "Modified Coaching Schedule" banner was removed from Mastery, Elite, CAB, Boss, AI Mastermind and BOSS Training and Support, and the Tue-Fri calls that had been trimmed were restored on Mastery, Elite, CAB, Boss and AI Mastermind (with the new Mashore Method Office Hours links). The old yellow retreat announcement stays removed.
 
-- **Thanksgiving closure announcement on the 30 Day Success Plan (added Nov 17, 2026).** Yellow `cwk-announce` card above the Reminder: "Thanksgiving: We will be closed for Thanksgiving." It replaced the old team-retreat note. No specific days were given, so none are shown. The Success Plan calls on Thu Nov 26 were NOT changed: ask the user whether any calls should come off for Thanksgiving, and whether this announcement should go on other calendars. Remove it after Thanksgiving (Nov 26, 2026). The KMC Student Panel Call (Nov 5) was removed from the Success Plan on Nov 17, 2026.
+- **Thanksgiving closure announcement on the 30 Day Success Plan (added Nov 17, 2026).** Yellow `cwk-announce` card above the Reminder: "Thursday-Friday, November 26-27: We will be closed for Thanksgiving." (days confirmed by the user Nov 17: out Nov 26 and 27). It replaced the old team-retreat note. The Success Plan calls on Thu Nov 26 and Fri Nov 27 (Office Hours, Power Hour, Graduation) were NOT changed: ask the user whether any calls should come off, and whether this announcement should go on other calendars. Remove it after Nov 27, 2026. The KMC Student Panel Call (Nov 5) was removed from the Success Plan on Nov 17, 2026.
 
 ## Creating a new calendar
 
