@@ -62,6 +62,20 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
 .cwk-host-list li span.cwk-host-time{font-weight:700;color:#EC1C82;white-space:nowrap;}
 .cwk-join-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:13px 18px;border-radius:12px;background:#EC1C82;color:#fff;font-weight:800;font-size:14px;text-decoration:none;box-shadow:0 12px 24px rgba(236,28,130,.32);transition:transform .16s ease;margin-bottom:16px;}
 .cwk-join-btn:hover{transform:translateY(-2px);}
+/* THANKSGIVING WEEK 2026 - remove this block, the banner and the three .cwk-hol notices after Nov 27 */
+.cwk-thx{position:relative;margin:16px 0 0;padding:14px 18px 14px;border-radius:14px;background:linear-gradient(135deg,#FFF6E3 0%,#FDE9C4 100%);border:2px solid #C65A11;box-shadow:0 1px 2px rgba(122,31,43,.08),0 10px 24px -14px rgba(122,31,43,.45);text-align:center;font-family:inherit;}
+.cwk-thx::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;border-radius:12px 12px 0 0;background:linear-gradient(90deg,#7A1F2B,#C65A11,#E0A526,#C65A11,#7A1F2B);}
+.cwk-thx-hd{margin-top:6px;font-size:clamp(14px,2vw,19px);line-height:1.3;font-weight:800;letter-spacing:.02em;color:#7A1F2B;}
+.cwk-thx-days{margin:10px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.cwk-thx-days li{flex:1 1 200px;max-width:320px;padding:8px 12px;border-radius:10px;background:#fff;border:1px solid #E8C48A;font-size:12.5px;line-height:1.4;font-weight:600;color:#4A2A12;}
+.cwk-thx-days li b{display:block;font-weight:800;color:#C65A11;}
+.cwk-thx-days li.cwk-thx-closed{background:#7A1F2B;border-color:#7A1F2B;color:#FFF6E3;}
+.cwk-thx-days li.cwk-thx-closed b{color:#F5C65A;}
+.cwk-thx-ft{margin:10px 0 0;font-size:12.5px;line-height:1.5;font-weight:600;color:#7A1F2B;}
+.cwk-hol{margin:0;padding:9px 8px;border-radius:10px;text-align:center;font-size:12px;line-height:1.35;font-weight:800;background:#7A1F2B;color:#FFF6E3;border:2px solid #E0A526;}
+.cwk-hol.cwk-hol-wed{background:#C65A11;}
+.cwk-call.cwk-off{opacity:.45;filter:grayscale(1);pointer-events:none;cursor:not-allowed;box-shadow:none;}
+.cwk-call.cwk-off .cwk-n{text-decoration:line-through;}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -77,6 +91,17 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
       <p class="cwk-sub">Every call is a shortcut. Click any call to join.</p>
     </div>
     <div class="cwk-brand"><b>AI</b><em>MASTERMIND</em></div>
+  </div>
+
+  <!-- THANKSGIVING WEEK 2026 banner: remove after Nov 27, 2026 (see CLAUDE.md) -->
+  <div class="cwk-thx" role="note">
+    <div class="cwk-thx-hd">&#127809; THANKSGIVING WEEK &ndash; MODIFIED COACHING SCHEDULE &#129411;</div>
+    <ul class="cwk-thx-days">
+      <li><b>Wednesday, November 25</b>No Coaching Calls</li>
+      <li class="cwk-thx-closed"><b>Thursday, November 26</b>KMC Offices Closed</li>
+      <li class="cwk-thx-closed"><b>Friday, November 27</b>KMC Offices Closed</li>
+    </ul>
+    <p class="cwk-thx-ft">&#129505; Wishing our KMC family a wonderful Thanksgiving! Regular coaching schedules resume Monday, November 30.</p>
   </div>
 
   <!-- ANNOUNCEMENTS: To add a new pinned announcement, copy one entire "cwk-announce" block below (from <div class="cwk-announce"> to its closing </div>), paste it, and edit the text. Put the newest/most important announcement first. -->
@@ -133,22 +158,25 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
 
     <div class="cwk-day">
       <div class="cwk-dayhd">WED</div>
-      <a class="cwk-call cwk-pink" href="https://us06web.zoom.us/meeting/register/LxdyHKZWTqG7dDr0asiMug" target="_blank" rel="noopener noreferrer"><div class="cwk-n">BOSS training with Krista</div><div class="cwk-t">9:00 am PST</div></a>
-      <a class="cwk-call cwk-navy" href="https://us06web.zoom.us/j/84350566869?pwd=ds1gRwX1yeHM2gFbTlWEf78DslWcVu.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Mashore Method Support Office Hours</div><div class="cwk-t">4:00 pm PT</div></a>
+      <div class="cwk-hol cwk-hol-wed">&#127810; Thanksgiving Week &ndash; No Coaching Calls Today.</div>
+      <div class="cwk-call cwk-pink cwk-off" aria-disabled="true"><div class="cwk-n">BOSS training with Krista</div><div class="cwk-t">9:00 am PST</div></div>
+      <div class="cwk-call cwk-navy cwk-off" aria-disabled="true"><div class="cwk-n">Mashore Method Support Office Hours</div><div class="cwk-t">4:00 pm PT</div></div>
     </div>
 
     <div class="cwk-day">
       <div class="cwk-dayhd">THU</div>
-      <a class="cwk-call cwk-blue" href="https://us06web.zoom.us/j/88665203041?pwd=gFAvWnr1H6MKLFeVbm2s6BIPUE5EI2.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Mastermind Q&amp;A</div><div class="cwk-t">9:00 am PT</div><div class="cwk-badge">ID 886 6520 3041 &middot; PW 374637</div></a>
-      <a class="cwk-call cwk-green" href="https://us06web.zoom.us/j/87236310294?pwd=aYQFCGKga2BhcXbrgb7dJ7ApJm1hfR.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Boss Office Hours</div><div class="cwk-t">1:00 &ndash; 2:00 pm PST</div></a>
+      <div class="cwk-hol cwk-hol-thu">&#129411; Happy Thanksgiving! KMC Offices Closed.</div>
+      <div class="cwk-call cwk-blue cwk-off" aria-disabled="true"><div class="cwk-n">Mastermind Q&amp;A</div><div class="cwk-t">9:00 am PT</div><div class="cwk-badge">ID 886 6520 3041 &middot; PW 374637</div></div>
+      <div class="cwk-call cwk-green cwk-off" aria-disabled="true"><div class="cwk-n">Boss Office Hours</div><div class="cwk-t">1:00 &ndash; 2:00 pm PST</div></div>
     </div>
 
     <div class="cwk-day">
       <div class="cwk-dayhd">FRI</div>
-      <a class="cwk-call cwk-green" href="https://us06web.zoom.us/j/81358161354?pwd=Z5bR9lsVFGMqy05RbfPrhoDWsZ8F3K.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Boss Office Hours</div><div class="cwk-t">8:00 am PST</div></a>
-      <a class="cwk-call cwk-blue" href="https://us06web.zoom.us/j/84883700855?pwd=lCb08uvnuTdzAWG7HNtr8rBWlQM7ka.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Power Hour with Vickee</div><div class="cwk-t">9:00 am PST</div></a>
-      <a class="cwk-call cwk-navy" href="https://us06web.zoom.us/j/83749173788?pwd=bDi8ScHSewUT9BYE0n5UWs7b2psBzf.1" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Mashore Method Support Office Hours</div><div class="cwk-t">10:00 am PT</div></a>
-      <a class="cwk-call cwk-purple" href="https://us06web.zoom.us/meeting/register/L8KgnZtuS-a6VeoyLw4WHA" target="_blank" rel="noopener noreferrer"><div class="cwk-n">Magazine Skill Follow-Up</div><div class="cwk-t">11:00 am PST</div></a>
+      <div class="cwk-hol cwk-hol-fri">&#127810; Thanksgiving Holiday &ndash; KMC Offices Closed.</div>
+      <div class="cwk-call cwk-green cwk-off" aria-disabled="true"><div class="cwk-n">Boss Office Hours</div><div class="cwk-t">8:00 am PST</div></div>
+      <div class="cwk-call cwk-blue cwk-off" aria-disabled="true"><div class="cwk-n">Power Hour with Vickee</div><div class="cwk-t">9:00 am PST</div></div>
+      <div class="cwk-call cwk-navy cwk-off" aria-disabled="true"><div class="cwk-n">Mashore Method Support Office Hours</div><div class="cwk-t">10:00 am PT</div></div>
+      <div class="cwk-call cwk-purple cwk-off" aria-disabled="true"><div class="cwk-n">Magazine Skill Follow-Up</div><div class="cwk-t">11:00 am PST</div></div>
     </div>
 
   </div>

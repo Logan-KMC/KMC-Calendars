@@ -119,6 +119,20 @@ html,body{margin:0;padding:0;background:#F6F4FA;}
   padding: 13px 18px; border-radius: 12px; background: #EC1C82; color: #fff; font-weight: 800; font-size: 14px;
   text-decoration: none; box-shadow: 0 12px 24px rgba(236,28,130,.32); transition: transform .16s ease; margin-bottom: 16px; }
 .kmcal-join-btn:hover { transform: translateY(-2px); }
+/* THANKSGIVING WEEK 2026 - remove this block, the banner and the three .kmcal-hol notices after Nov 27 */
+.kmcal-thx{position:relative;margin:16px 0 0;padding:14px 18px 14px;border-radius:14px;background:linear-gradient(135deg,#FFF6E3 0%,#FDE9C4 100%);border:2px solid #C65A11;box-shadow:0 1px 2px rgba(122,31,43,.08),0 10px 24px -14px rgba(122,31,43,.45);text-align:center;font-family:inherit;}
+.kmcal-thx::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;border-radius:12px 12px 0 0;background:linear-gradient(90deg,#7A1F2B,#C65A11,#E0A526,#C65A11,#7A1F2B);}
+.kmcal-thx-hd{margin-top:6px;font-size:clamp(14px,2vw,19px);line-height:1.3;font-weight:800;letter-spacing:.02em;color:#7A1F2B;}
+.kmcal-thx-days{margin:10px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+.kmcal-thx-days li{flex:1 1 200px;max-width:320px;padding:8px 12px;border-radius:10px;background:#fff;border:1px solid #E8C48A;font-size:12.5px;line-height:1.4;font-weight:600;color:#4A2A12;}
+.kmcal-thx-days li b{display:block;font-weight:800;color:#C65A11;}
+.kmcal-thx-days li.kmcal-thx-closed{background:#7A1F2B;border-color:#7A1F2B;color:#FFF6E3;}
+.kmcal-thx-days li.kmcal-thx-closed b{color:#F5C65A;}
+.kmcal-thx-ft{margin:10px 0 0;font-size:12.5px;line-height:1.5;font-weight:600;color:#7A1F2B;}
+.kmcal-hol{margin:0;padding:9px 8px;border-radius:10px;text-align:center;font-size:12px;line-height:1.35;font-weight:800;background:#7A1F2B;color:#FFF6E3;border:2px solid #E0A526;}
+.kmcal-hol.kmcal-hol-wed{background:#C65A11;}
+.kmcal-call.kmcal-off{opacity:.45;filter:grayscale(1);pointer-events:none;cursor:not-allowed;box-shadow:none;}
+.kmcal-call.kmcal-off .kmcal-n{text-decoration:line-through;}
 </style>
 </head>
 <body>
@@ -134,6 +148,17 @@ html,body{margin:0;padding:0;background:#F6F4FA;}
       <p class="kmcal-sub">Every call is a shortcut. Click any call to join.</p>
     </div>
     <div class="kmcal-brand"><b>Krista Mashore</b><em>COACHING</em></div>
+  </div>
+
+  <!-- THANKSGIVING WEEK 2026 banner: remove after Nov 27, 2026 (see CLAUDE.md) -->
+  <div class="kmcal-thx" role="note">
+    <div class="kmcal-thx-hd">&#127809; THANKSGIVING WEEK &ndash; MODIFIED COACHING SCHEDULE &#129411;</div>
+    <ul class="kmcal-thx-days">
+      <li><b>Wednesday, November 25</b>No Coaching Calls</li>
+      <li class="kmcal-thx-closed"><b>Thursday, November 26</b>KMC Offices Closed</li>
+      <li class="kmcal-thx-closed"><b>Friday, November 27</b>KMC Offices Closed</li>
+    </ul>
+    <p class="kmcal-thx-ft">&#129505; Wishing our KMC family a wonderful Thanksgiving! Regular coaching schedules resume Monday, November 30.</p>
   </div>
 
   <p class="kmcal-note"><b>Reminder:</b> Have your camera on or full name displayed to avoid removal. Names like &ldquo;iPhone,&rdquo; and AI notetakers are not allowed. Raise your hand for help and have the platform you need open and ready.</p>
@@ -199,36 +224,39 @@ html,body{margin:0;padding:0;background:#F6F4FA;}
     </div>
 
     <div class="kmcal-day">
-      <div class="kmcal-dayhd"><b>WED</b><i>3</i></div>
-      <a class="kmcal-call kmcal-pink" href="https://us06web.zoom.us/meeting/register/Yrzd9YdYQcyqMQJewQfhxg" target="_blank" rel="noopener noreferrer">
-        <div class="kmcal-n">Mastery Coaching Call</div><div class="kmcal-t">8:00 &ndash; 9:15 am PT</div></a>
-      <a class="kmcal-call kmcal-blue" href="https://us06web.zoom.us/j/84883700855?pwd=lCb08uvnuTdzAWG7HNtr8rBWlQM7ka.1" target="_blank" rel="noopener noreferrer">
-        <div class="kmcal-n">Power Hour with Vickee</div><div class="kmcal-t">9:00 am PT</div></a>
-      <a class="kmcal-call kmcal-orange" href="https://us06web.zoom.us/j/86034246898?pwd=TnHkmXK7avImUqxLUMlOuaJYIfoKiv.1" target="_blank" rel="noopener noreferrer">
-        <div class="kmcal-n">Office Hours</div><div class="kmcal-t">1:00 &ndash; 2:00 pm PT</div></a>
+      <div class="kmcal-dayhd"><b>WED</b><i>0</i></div>
+      <div class="kmcal-hol kmcal-hol-wed">&#127810; Thanksgiving Week &ndash; No Coaching Calls Today.</div>
+      <div class="kmcal-call kmcal-pink kmcal-off" aria-disabled="true">
+        <div class="kmcal-n">Mastery Coaching Call</div><div class="kmcal-t">8:00 &ndash; 9:15 am PT</div></div>
+      <div class="kmcal-call kmcal-blue kmcal-off" aria-disabled="true">
+        <div class="kmcal-n">Power Hour with Vickee</div><div class="kmcal-t">9:00 am PT</div></div>
+      <div class="kmcal-call kmcal-orange kmcal-off" aria-disabled="true">
+        <div class="kmcal-n">Office Hours</div><div class="kmcal-t">1:00 &ndash; 2:00 pm PT</div></div>
     </div>
 
     <div class="kmcal-day">
-      <div class="kmcal-dayhd"><b>THU</b><i>4</i></div>
-      <a class="kmcal-call kmcal-orange" href="https://us06web.zoom.us/j/85781260004?pwd=ctyeaN7Na598vBeTKIHWwOcFqojOXx.1" target="_blank" rel="noopener noreferrer">
-        <div class="kmcal-n">Office Hours</div><div class="kmcal-t">6:00 &ndash; 7:00 am PT</div></a>
-      <div class="kmcal-call kmcal-blue">
+      <div class="kmcal-dayhd"><b>THU</b><i>0</i></div>
+      <div class="kmcal-hol kmcal-hol-thu">&#129411; Happy Thanksgiving! KMC Offices Closed.</div>
+      <div class="kmcal-call kmcal-orange kmcal-off" aria-disabled="true">
+        <div class="kmcal-n">Office Hours</div><div class="kmcal-t">6:00 &ndash; 7:00 am PT</div></div>
+      <div class="kmcal-call kmcal-blue kmcal-off" aria-disabled="true">
         <div class="kmcal-n">Group Accountability</div><div class="kmcal-t">8:00 &ndash; 9:00 am PT</div>
         <div class="kmcal-t" style="margin-top:8px;">Reach out to your advisor through Voxer to get a link:<br>Dina: Dina KMC<br>Jennifer: jnew1972</div></div>
-      <a class="kmcal-call kmcal-navy" href="https://us06web.zoom.us/j/89184496885?pwd=OCBLIJQ2UimxIHB8glXrmxDxWQab8w.1" target="_blank" rel="noopener noreferrer">
-        <div class="kmcal-n">Mashore Method Office Hours</div><div class="kmcal-t">9:00 &ndash; 10:00 am PT</div></a>
-      <a class="kmcal-call kmcal-orange" href="https://us06web.zoom.us/j/85717972212?pwd=MrdEQwIfxsQ98YZfUSh0AuDFYpdAQ6.1" target="_blank" rel="noopener noreferrer">
-        <div class="kmcal-n">Office Hours</div><div class="kmcal-t">10:00 &ndash; 11:00 am PT</div></a>
+      <div class="kmcal-call kmcal-navy kmcal-off" aria-disabled="true">
+        <div class="kmcal-n">Mashore Method Office Hours</div><div class="kmcal-t">9:00 &ndash; 10:00 am PT</div></div>
+      <div class="kmcal-call kmcal-orange kmcal-off" aria-disabled="true">
+        <div class="kmcal-n">Office Hours</div><div class="kmcal-t">10:00 &ndash; 11:00 am PT</div></div>
     </div>
 
     <div class="kmcal-day">
-      <div class="kmcal-dayhd"><b>FRI</b><i>2</i></div>
-      <a class="kmcal-call kmcal-blue" href="https://us06web.zoom.us/j/84883700855?pwd=lCb08uvnuTdzAWG7HNtr8rBWlQM7ka.1" target="_blank" rel="noopener noreferrer">
-        <div class="kmcal-n">Power Hour with Vickee</div><div class="kmcal-t">9:00 am PT</div></a>
-      <a class="kmcal-call kmcal-orange" href="https://us06web.zoom.us/j/88321885201?pwd=ixDeR9u36l8E3T7GHUJTFgbbHlG77v.1" target="_blank" rel="noopener noreferrer">
-        <div class="kmcal-n">Office Hours</div><div class="kmcal-t">9:30 &ndash; 11:00 am PT</div></a>
-      <a class="kmcal-call kmcal-navy" href="https://us06web.zoom.us/j/88119010649?pwd=err0fWRwlzTzTgFWBKDs2mZGwgMgEw.1" target="_blank" rel="noopener noreferrer">
-        <div class="kmcal-n">Mashore Method Office Hours</div><div class="kmcal-t">1:00 &ndash; 2:00 pm PT</div></a>
+      <div class="kmcal-dayhd"><b>FRI</b><i>0</i></div>
+      <div class="kmcal-hol kmcal-hol-fri">&#127810; Thanksgiving Holiday &ndash; KMC Offices Closed.</div>
+      <div class="kmcal-call kmcal-blue kmcal-off" aria-disabled="true">
+        <div class="kmcal-n">Power Hour with Vickee</div><div class="kmcal-t">9:00 am PT</div></div>
+      <div class="kmcal-call kmcal-orange kmcal-off" aria-disabled="true">
+        <div class="kmcal-n">Office Hours</div><div class="kmcal-t">9:30 &ndash; 11:00 am PT</div></div>
+      <div class="kmcal-call kmcal-navy kmcal-off" aria-disabled="true">
+        <div class="kmcal-n">Mashore Method Office Hours</div><div class="kmcal-t">1:00 &ndash; 2:00 pm PT</div></div>
     </div>
 
   </div>
