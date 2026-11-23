@@ -66,6 +66,14 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
 .cwk-thx-days li.cwk-thx-closed{background:#7A1F2B;border-color:#7A1F2B;color:#FFF6E3;}
 .cwk-thx-days li.cwk-thx-closed b{color:#F5C65A;}
 .cwk-thx-ft{margin:10px 0 0;font-size:12.5px;line-height:1.5;font-weight:600;color:#7A1F2B;}
+.cwk-sum{position:relative;margin:16px 0 0;padding:16px 18px 16px;border-radius:14px;background:linear-gradient(135deg,#5B1AA8 0%,#B3199A 55%,#F0457A 100%);border:2px solid #FFD43B;box-shadow:0 1px 2px rgba(60,10,110,.18),0 12px 28px -14px rgba(91,26,168,.6);text-align:center;font-family:inherit;color:#fff;}
+.cwk-sum::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;border-radius:12px 12px 0 0;background:repeating-linear-gradient(90deg,#FFD43B 0 22px,#fff 22px 44px,#FF7AA8 44px 66px);}
+.cwk-sum-hd{margin-top:6px;font-size:clamp(15px,2.3vw,21px);line-height:1.3;font-weight:800;letter-spacing:.02em;color:#fff;}
+.cwk-sum-tx{margin:8px 0 0;font-size:13.5px;line-height:1.5;font-weight:600;color:#fff;}
+.cwk-sum-tx b{font-weight:800;color:#FFE88A;}
+.cwk-sum-rg{margin:12px 0 0;font-size:13px;line-height:1.4;font-weight:800;color:#FFE88A;}
+.cwk-sum-btn{display:inline-block;margin:8px 0 0;padding:11px 22px;border-radius:999px;background:#FFD43B;color:#3A0F6B !important;font-size:14px;font-weight:800;text-decoration:none;box-shadow:0 4px 12px -4px rgba(0,0,0,.4);}
+.cwk-sum-btn:hover{background:#fff;}
 .cwk-hol{margin:0;padding:9px 8px;border-radius:10px;text-align:center;font-size:12px;line-height:1.35;font-weight:800;background:#7A1F2B;color:#FFF6E3;border:2px solid #E0A526;}
 .cwk-hol.cwk-hol-wed{background:#C65A11;}
 </style>
@@ -94,6 +102,14 @@ html,body{margin:0;padding:0;background:#F3F1FA;}
       <li class="cwk-thx-closed"><b>Friday, November 27</b>KMC Offices Closed</li>
     </ul>
     <p class="cwk-thx-ft">&#129505; Wishing our KMC family a wonderful Thanksgiving! Regular coaching schedules resume Monday, November 30.</p>
+  </div>
+
+  <!-- SUMMIT WATCH PARTY banner (added Nov 23, 2026): remove after Wed Dec 2, 2026 (see CLAUDE.md) -->
+  <div class="cwk-sum" role="note">
+    <div class="cwk-sum-hd">&#127881; SUMMIT WATCH PARTY &ndash; DECEMBER 1 &amp; 2! &#127881;</div>
+    <p class="cwk-sum-tx">Join us <b>Tuesday, December 1</b>, and <b>Wednesday, December 2</b>, starting at <b>9:00 AM PST</b> for our Summit Watch Party!<br>We can&rsquo;t wait to see you all there! &#127881;</p>
+    <p class="cwk-sum-rg">&#128279; Register &amp; Join Here:</p>
+    <a class="cwk-sum-btn" href="https://us06web.zoom.us/meeting/register/r1s_7qOUSDaJsL3aB1WD6w" target="_blank" rel="noopener noreferrer">Click here to register &amp; join</a>
   </div>
 
   <!-- ANNOUNCEMENT: To add another, copy this whole cwk-announce block and edit the text. Remove this one after Nov 13, 2026. -->
