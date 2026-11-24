@@ -91,3 +91,5 @@ Memory does not carry between people or computers, so track anything dated here.
 ## Creating a new calendar
 
 Copy the simplest similar file (`boss-support-calendar.html` is a good template), then change the `<title>`, the `<h1>`, and the calls. Use a descriptive filename like `<name>-support-calendar.html`. After it is pushed, the page is live at the URL pattern above. Give the user the embed snippet for GHL, and add the file to the table in this document.
+
+- **Mon Nov 30, 2026 one-time notice (added Nov 24, 2026): REVERT after Mon Nov 30.** On Boss and AI Mastermind the Monday "Boss Office Hours with Hailey" (11:00 am PST) card was replaced by a red `cwk-alert` box "BOSS Office Hours - Schedule Change" (no 11 AM office hours; Alex's BOSS Installation Workshop 12-5 PM PST; link `https://workshop.kristamashore.com/boss`). These pages are undated, so it shows every week until reverted: `git revert` that commit on Dec 1 to restore the Hailey card and its Zoom link (`…j/89380883117`). Tell the user when Nov 30 has passed.
